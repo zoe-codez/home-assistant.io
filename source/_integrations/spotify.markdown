@@ -13,7 +13,9 @@ ha_codeowners:
 ha_domain: spotify
 ha_zeroconf: true
 ha_platforms:
+  - diagnostics
   - media_player
+  - sensor
 ha_integration_type: service
 ---
 

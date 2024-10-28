@@ -17,6 +17,7 @@ ha_codeowners:
 ha_domain: switchbot_cloud
 ha_platforms:
   - climate
+  - lock
   - sensor
   - switch
   - vacuum

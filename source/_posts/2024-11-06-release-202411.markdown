@@ -1,0 +1,318 @@
+---
+layout: post
+title: "2024.11: Beta release notes"
+description: "Beta release notes for Home Assistant 2024.11"
+date: 2024-10-27 00:00:00
+date_formatted: "November 6, 2024"
+author: Franck Nijhof
+author_twitter: frenck
+comments: true
+categories:
+  - Release-Notes
+  - Core
+og_image: /images/blog/2024-11/social.png
+---
+
+<lite-youtube videoid="x" videotitle="Home Assistant 2024.11 Release Party"></lite-youtube>
+
+{% note %}
+
+**Welcome to the beta release notes for Home Assistant 2024.11** 🎉
+
+<br />
+
+Please note that these release notes are a work in progress. 👷‍♀️ We will be
+completing them over the next couple of days. Not all features might be final
+yet, and some features _**may not** make it into the final release_.
+
+<br />
+
+**Want to help test the beta?** Awesome! ❤️ We have documented how you
+[can join our beta channel and install the beta here](/common-tasks/os/#running-a-beta-version).
+
+<br />
+
+While running the beta, we highly recommend joining our _#beta_ channel on
+the [Home Assistant Discord chat](/join-chat)! 💬 Most developers and beta
+testers are in this channel during the beta period to share experiences, ideas,
+and iterate over new features, fine-tuning them before the final release.
+It's a really fun place to hang out. 😎
+
+<br />
+
+**Reporting issues**: As this is a beta test, you might encounter unexpected
+behavior or issues. 🐞 We use the GitHub issue tracker to track beta issues.
+You can find our issue trackers and the reported issues during beta here:
+
+<br />
+
+- [Report(ed) beta **dashboards/UI/frontend** issues](https://github.com/home-assistant/frontend/milestone/125)
+- [Report(ed) beta **integrations/automations/backend/core** issues](https://github.com/home-assistant/core/milestone/699)
+- [Report(ed) beta **documentation** issues](https://github.com/home-assistant/home-assistant.io/milestone/132)
+
+🙏 When reporting issues, **make sure to mention the exact beta version you are
+running** in the issue description. This will help us identify and track the
+issue correctly. Read more about [reporting issues here](/help/reporting_issues/).
+
+<br />
+
+Issues introduced in the beta are processed with priority. 🔝
+
+{% endnote %}
+
+{% tip %}
+
+Don't forget to [join our release party live stream on YouTube](https://www.youtube.com/watch?v=_X2-encNyrA)
+6 November 2024, at 20:00 GMT / 12:00 PT / 21:00 CET!
+
+{% endtip %}
+
+Home Assistant 2024.11! 🎉
+
+Enjoy the (beta) release!
+
+../Frenck
+
+<!--more-->
+
+- [Sections dashboard now generally available](#sections-dashboard-now-generally-available)
+- [Low latency cameras using WebRTC](#low-latency-cameras-using-webrtc)
+- [Integrations](#integrations)
+  - [New integrations](#new-integrations)
+  - [Noteworthy improvements to existing integrations](#noteworthy-improvements-to-existing-integrations)
+  - [Now available to set up from the UI](#now-available-to-set-up-from-the-ui)
+- [Other noteworthy changes](#other-noteworthy-changes)
+  - [Live logs](#live-logs)
+- [Need help? Join the community!](#need-help-join-the-community)
+- [Backward-incompatible changes](#backward-incompatible-changes)
+- [All changes](#all-changes)
+
+## Sections dashboard now generally available
+
+Exciting news on thedashboarding front; the new sections type dashboards are
+now marked as stable! 
+
+This means that, as of this release, when you create a new dashboard, you
+will get our awesome drop and drop experience!
+
+## Low latency cameras using WebRTC
+
+Lorem ipsum
+
+## Integrations
+
+Thanks to our community for keeping pace with the new {% term integrations %}
+and improvements to existing ones! You’re all awesome 🥰
+
+### New integrations
+
+We welcome the following new integrations in this release:
+
+- **[Husqvarna Automower BLE]**, added by [@alistair23]  
+  Integrate your Husqvarna lawnmower using Bluetooth
+
+[@alistair23]: https://github.com/alistair23
+[Husqvarna Automower BLE]: /integrations/husqvarna_automower_ble
+
+### Noteworthy improvements to existing integrations
+
+It is not just new {% term integrations %} that have been added; existing
+integrations are also being constantly improved. Here are some of the noteworthy
+changes to existing integrations:
+
+- The [Lorem ipsum] integration now supports slipsum! Thanks [@frenck]!
+
+[@frenck]: https://github.com/frenck
+[Lorem ipsum]: /integrations/lorem_ipsum
+
+{% details "Potential changes to process" icon="mdi:scale-balance" %}
+
+Processed up to _#129297.
+
+- Add Light support for Switcher Runner S11 ([@YogevBokobza] - [#126402]) ([switcher_kis docs]) (new-platform)
+- Add power sensor detection in fibaro integration ([@rappenze] - [#126964]) ([fibaro docs])
+- Add support for room sensors in ViCare integration ([@CFenner] - [#125243]) ([vicare docs])
+- Add hotwater storage sensors to ViCare integration ([@CFenner] - [#126570]) ([vicare docs])
+- Add sensor for total installations and integrations to Analytics Insights ([@starkillerOG] - [#127248]) ([analytics_insights docs])
+- Add sensors for gems and mystic hourglasses to Habitica integration ([@tr4nt0r] - [#127651]) ([habitica docs])
+- Add work area sensors to Husqvarna Automower ([@Thomas55555] - [#126931]) ([husqvarna_automower docs])
+- Add sensors to Omada ([@MarkGodwin] - [#127767]) ([tplink_omada docs]) (new-platform)
+- Add audio feature sensors to Spotify ([@joostlek] - [#128785]) ([spotify docs]) (new-platform)
+- Add Airzone Cloud main zone mode select ([@Noltari] - [#125918]) ([airzone_cloud docs])
+- Add Airzone Cloud switch entities to zones ([@Noltari] - [#125917]) ([airzone_cloud docs]) (new-platform)
+- Add 'select' to configure Schlage locks "Auto Lock Time" ([@mxr] - [#123758]) ([schlage docs])
+- Add Meter Pro support to SwitchBot ([@bdraco] - [#128991]) ([switchbot docs]) (noteworthy)
+- Add lock to switchbot_cloud ([@miterion] - [#115128]) ([switchbot_cloud docs]) (new-platform)
+- LinkPlay multiroom support ([@silamon] - [#127862]) ([linkplay docs])
+- Add more spotify sensors ([@joostlek] - [#129215]) ([spotify docs]) (noteworthy)
+
+{% enddetails %}
+
+### Now available to set up from the UI
+
+While most {% term integrations %} can be set up directly from the Home Assistant
+user interface, some were only available using YAML configuration. We keep moving
+more integrations to the UI, making them more accessible for everyone
+to set up and use.
+
+The following integrations are now available via the Home Assistant UI:
+
+- **[Local file]**, done by [@gjohansson-ST]
+- **[Onkyo]**, done by [@Nebula83]
+- **[Smarty]**, done by [@joostlek]
+
+[@gjohansson-ST]: https://github.com/gjohansson-ST
+[@joostlek]: https://github.com/joostlek
+[@Nebula83]: https://github.com/Nebula83
+[Local file]: /integrations/local_file
+[Onkyo]: /integrations/onkyo
+[Smarty]: /integrations/smarty
+
+### Farewell to the following
+
+The following {% term integrations %} are also no longer available as
+of this release:
+
+- **Bloomsky**. Their service shut down.
+- **Google Domains**. The domain registration service by Google has been
+  shut down.
+- **Spider**. The service is no longer available.
+
+## Other noteworthy changes
+
+There are many more improvements in this release; here are some of the other
+noteworthy changes this release:
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+  Thanks [@frenck]!
+
+[@frenck]: https://github.com/frenck
+
+- Add snapshot service to image entity ([@NickM-27] - [#110057]) ([image docs])
+- Blueprints for template entities ([@tetele] - [#126971]) ([template docs]) (noteworthy)
+- Add limited template to at field for time triggers ([@Petro31] - [#126584]) ([homeassistant docs])
+- Add `nmi` (nautical miles) as valid distance unit ([@mib1185] - [#124723]) (noteworthy)
+
+### Live logs
+
+A bit technical maybe, but if you need to view the Home Assistant logs, you
+can now view those live! 
+
+_**Insert recording of it streaming**_
+
+## Need help? Join the community!
+
+Home Assistant has a great community of users who are all more than willing
+to help each other out. So, join us!
+
+Our very active [Discord chat server](/join-chat) is an excellent place to be
+at, and don't forget to join our amazing [forums](https://community.home-assistant.io/).
+
+Found a bug or issue? Please report it in our [issue tracker](https://github.com/home-assistant/core/issues),
+to get it fixed! Or, check [our help page](/help) for guidance for more
+places you can go.
+
+Are you more into email? [Sign-up for our Building the Open Home Newsletter](/newsletter)
+to get the latest news about features, things happening in our community and
+other news about building an Open Home; straight into your inbox.
+
+## Backward-incompatible changes
+
+We do our best to avoid making changes to existing functionality that might
+unexpectedly impact your Home Assistant installation. Unfortunately, sometimes,
+it is inevitable.
+
+We always make sure to document these changes to make the transition as easy as
+possible for you. This release has the following backward-incompatible changes:
+
+{% details "A. O. Smith" %}
+
+A. O. Smith now provides the hot water status as a percentage rather than low,
+medium, or high. The hot water status entity has been updated accordingly.
+
+([@bdr99] - [#127678]) ([documentation](/integrations/aosmith))
+
+[@bdr99]: https://github.com/bdr99
+[#127678]: https://github.com/home-assistant/core/pull/127678
+
+{% enddetails %}
+
+{% details "HomeKit" %}
+
+Historically, many integrations implemented doorbells as binary sensors with a
+device class of occupancy. This design was replaced with the new event entities,
+which use a purpose-built device class of doorbell.
+
+HomeKit will no longer automatically link binary sensors with device class
+occupancy as a linked doorbell sensor. Linked doorbell sensors can continue
+to be configured manually via YAML.
+
+([@bdraco] - [#127668]) ([documentation](/integrations/homekit))
+
+[@bdraco]: https://github.com/bdraco
+[#127668]: https://github.com/home-assistant/core/pull/127668
+
+{% enddetails %}
+
+{% details "Litter-Robot" %}
+
+Previously Litter-Robot could use have an off-state. This has now changed to
+`docked` as `off` isn't a valid state for `vacuum` entities.
+
+([@gjohansson-ST] - [#128297]) ([documentation](/integrations/litterrobot))
+
+[@gjohansson-ST]: https://github.com/gjohansson-ST
+[#128297]: https://github.com/home-assistant/core/pull/128297
+
+{% enddetails %}
+
+{% details "Netatmo" %}
+
+The preset modes of the thermostat have been renamed in order to support
+translations `Schedule`, `Frost guard` and `Manual` has been renamed to
+`schedule`, `frost_guard` and `manual`.
+
+([@piitaya] - [#128890]) ([documentation](/integrations/netatmo))
+
+[@piitaya]: https://github.com/piitaya
+[#128890]: https://github.com/home-assistant/core/pull/128890
+
+{% enddetails %}
+
+{% details "Updates" %}
+
+State attributes of update entities have been changed:
+
+- The `in_progress` state attribute is now always a `bool`, never an integer.
+- A new state attribute `update_percentage` has been added. The
+  `update_percentage` is a number between 0-100 if an update is in progress
+  and the entity supports reporting progress, or `None` if an update is not
+  in progress or an update is in progress but the entity does not support
+  reporting progress.
+
+Scripts, automations, custom frontend components etc. which consume the
+`in_progress` state attribute of update entities need to be updated accordingly.
+
+([@emontnemery] - [#128877]) ([documentation](/integrations/update))
+
+[@emontnemery]: https://github.com/emontnemery
+[#128877]: https://github.com/home-assistant/core/pull/128877
+
+{% enddetails %}
+
+If you are a custom integration developer and want to learn about changes and
+new features available for your integration: Be sure to follow our
+[developer blog][devblog]. The following are the most notable for this release:
+
+- [Changes to the UnitOfConductivity enum](https://developers.home-assistant.io/blog/2024/10/08/unit-of-conductivity-changes)
+- [Deprecating state constants for cover](https://developers.home-assistant.io/blog/2024/10/08/state-constants-cover-deprecation)
+- [Extend deprecation period of hass.helpers](https://developers.home-assistant.io/blog/2024/10/09/extend-deprecation-hass-helpers)
+- [New alarm control panel state property and state enum](https://developers.home-assistant.io/blog/2024/10/22/new-alarm-state-property)
+- [New helpers and best practises for reauth and reconfigure flows](https://developers.home-assistant.io/blog/2024/10/21/reauth-reconfigure-helpers)
+
+[devblog]: https://developers.home-assistant.io/blog/
+
+## All changes
+
+Of course, there is a lot more in this release. You can find a list of
+all changes made here: [Full changelog for Home Assistant Core 2024.11](/changelogs/core-2024.11)
