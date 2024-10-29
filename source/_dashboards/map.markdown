@@ -146,7 +146,7 @@ source:
 focus:
   required: false
   default: true
-  description: When set to `false`, this entities of this source will not be considered for determining the default zoom or fit of the map.
+  description: When set to `false`, the entities of this source will not be considered for determining the default zoom or fit of the map.
   type: boolean
 {% endconfiguration %}
 
