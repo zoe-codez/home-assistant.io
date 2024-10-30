@@ -6,6 +6,7 @@ ha_category:
   - Plug
   - Remote
   - Sensor
+  - Lock
   - Switch
   - Vacuum
 ha_release: '2023.10'
@@ -42,6 +43,7 @@ Please note, device names configured in the SwitchBot app are transferred into H
 - IR appliances exposed through the different hubs:
   - ON/OFF for all appliance types excepted "Others"
   - Air Conditioner
+- Lock
 - Meter
 - MeterPlus
 - Outdoor Meter
