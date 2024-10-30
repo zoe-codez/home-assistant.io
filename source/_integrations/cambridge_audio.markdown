@@ -11,6 +11,7 @@ ha_platforms:
   - diagnostics
   - media_player
   - select
+  - switch
 ha_codeowners:
   - '@noahhusby'
 ha_config_flow: true
@@ -56,7 +57,8 @@ The integration provides a few entities to configure the device settings. The fo
 
 - Display brightness
 - Pre-Amp
-- Early Update
+- Early update
+- Audio output (Speaker select)
 
 ## Playing media
 
