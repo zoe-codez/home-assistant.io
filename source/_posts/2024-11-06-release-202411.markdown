@@ -95,6 +95,14 @@ now marked as stable!
 This means that, as of this release, when you create a new dashboard, you
 will get our awesome drag and drop experience!
 
+### Convert your old dashboards to sections dashboards
+
+This release also includes a conversion from the old masonry type to the new sections type dashboards. If you change the type of a view to sections you get a button to convert the view. All the cards of the old view are then placed in an imported cards section, and you can drag them into sections as you please!
+
+### Precise sizing mode
+
+You now have even more control over the size of cards. In the layout options of a card you can now enable "Precise mode", this will give you 3 time more options for width and height as before!
+
 ## Low latency cameras using WebRTC
 
 Camera stream will now try to use WebRTC when possible. This is a peer-to-peer connection making for lower latency streams.
