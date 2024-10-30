@@ -2,7 +2,7 @@
 layout: post
 title: "2024.11: Beta release notes"
 description: "Beta release notes for Home Assistant 2024.11"
-date: 2024-10-27 00:00:00
+date: 2024-10-30 00:00:00
 date_formatted: "November 6, 2024"
 author: Franck Nijhof
 author_twitter: frenck
@@ -89,15 +89,18 @@ Enjoy the (beta) release!
 
 ## Sections dashboard now generally available
 
-Exciting news on thedashboarding front; the new sections type dashboards are
+Exciting news on the dashboarding front; the new sections type dashboards are
 now marked as stable! 
 
 This means that, as of this release, when you create a new dashboard, you
-will get our awesome drop and drop experience!
+will get our awesome drag and drop experience!
 
 ## Low latency cameras using WebRTC
 
-Lorem ipsum
+Camera stream will now try to use WebRTC when possible. This is a peer-to-peer connection making for lower latency streams.
+It will try to use the fastest and most direct path. Sometimes a direct connection between the client and camera is not possible, for those situations the stream needs to be relayed by an external server. Home Assistant Cloud by Nabu Casa provides this relay server for all Home Assistant Cloud subscribers! So no matter where you are, you should always be able to stream your camera with low latency.
+
+If WebRTC is not available it will fallback to using the old method of streaming.
 
 ## Integrations
 
@@ -114,20 +117,17 @@ We welcome the following new integrations in this release:
 [@alistair23]: https://github.com/alistair23
 [Husqvarna Automower BLE]: /integrations/husqvarna_automower_ble
 
+- Add go2rtc and extend camera integration for better WebRTC support ([@edenhaus] - [#124410]) ([camera docs]) ([rtsp_to_webrtc docs]) (new-integration)
+- Allow SSL security_protocol configuration property in apache_kafka component ([@jkaflik] - [#128651]) ([apache_kafka docs]) (new-integration)
+- Palazzetti integration ([@dotvav] - [#128259]) ([palazzetti docs]) (new-integration)
+- Add LG ThinQ integration ([@LG-ThinQ-Integration] - [#129299]) ([lg_thinq docs]) (new-integration)
+- Add musicassistant integration ([@jozefKruszynski] - [#128919]) ([mass docs]) (new-integration)
+
 ### Noteworthy improvements to existing integrations
 
 It is not just new {% term integrations %} that have been added; existing
 integrations are also being constantly improved. Here are some of the noteworthy
 changes to existing integrations:
-
-- The [Lorem ipsum] integration now supports slipsum! Thanks [@frenck]!
-
-[@frenck]: https://github.com/frenck
-[Lorem ipsum]: /integrations/lorem_ipsum
-
-{% details "Potential changes to process" icon="mdi:scale-balance" %}
-
-Processed up to _#129297.
 
 - Add Light support for Switcher Runner S11 ([@YogevBokobza] - [#126402]) ([switcher_kis docs]) (new-platform)
 - Add power sensor detection in fibaro integration ([@rappenze] - [#126964]) ([fibaro docs])
@@ -145,6 +145,10 @@ Processed up to _#129297.
 - Add lock to switchbot_cloud ([@miterion] - [#115128]) ([switchbot_cloud docs]) (new-platform)
 - LinkPlay multiroom support ([@silamon] - [#127862]) ([linkplay docs])
 - Add more spotify sensors ([@joostlek] - [#129215]) ([spotify docs]) (noteworthy)
+
+{% details "Potential changes to process" icon="mdi:scale-balance" %}
+
+Processed up to _#129297.
 
 {% enddetails %}
 
@@ -183,11 +187,6 @@ of this release:
 There are many more improvements in this release; here are some of the other
 noteworthy changes this release:
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-  Thanks [@frenck]!
-
-[@frenck]: https://github.com/frenck
-
 - Add snapshot service to image entity ([@NickM-27] - [#110057]) ([image docs])
 - Blueprints for template entities ([@tetele] - [#126971]) ([template docs]) (noteworthy)
 - Add limited template to at field for time triggers ([@Petro31] - [#126584]) ([homeassistant docs])
@@ -195,8 +194,8 @@ noteworthy changes this release:
 
 ### Live logs
 
-A bit technical maybe, but if you need to view the Home Assistant logs, you
-can now view those live! 
+A bit technical maybe, but if you need to view the Home Assistant supervisor logs, you
+can now view those live! No need to press refresh buttons anymore, and you can scroll back in time to see previous log items.
 
 _**Insert recording of it streaming**_
 
@@ -299,6 +298,39 @@ Scripts, automations, custom frontend components etc. which consume the
 [#128877]: https://github.com/home-assistant/core/pull/128877
 
 {% enddetails %}
+
+{% details "all" %}
+
+- Remove the Google Domains integration ([@emontnemery] - [#127278]) ([google_domains docs]) (breaking-change)
+- Add protocol upload / download sensors to Deluge ([@mgrandi] - [#119203]) ([deluge docs]) (breaking-change)
+- Remove Spider integration ([@joostlek] - [#127346]) ([spider docs]) (breaking-change)
+- Remove enigma2 yaml import ([@autinerd] - [#127597]) ([enigma2 docs]) (breaking-change)
+- Remove automatic linkage of doorbells to HomeKit accessories via device class occupancy ([@bdraco] - [#127668]) ([homekit docs]) (breaking-change)
+- Update A. O. Smith integration to reflect upstream API changes ([@bdr99] - [#127678]) ([aosmith docs]) (breaking-change)
+- Remove deprecated yaml import from Habitica ([@tr4nt0r] - [#127946]) ([habitica docs]) (breaking-change)
+- End deprecation for config entry import for folder watcher ([@gjohansson-ST] - [#128056]) ([folder_watcher docs]) (breaking-change)
+- Remove deprecated restart service in modbus ([@gjohansson-ST] - [#128059]) ([modbus docs]) (breaking-change)
+- Remove deprecated speed limit lock entity from tessie ([@jpbede] - [#128043]) ([tessie docs]) (breaking-change)
+- Remove config entry import from lg_netcast ([@gjohansson-ST] - [#128179]) ([lg_netcast docs]) (breaking-change)
+- Remove deprecated notify service in ecobee ([@gjohansson-ST] - [#128177]) ([ecobee docs]) (breaking-change)
+- Remove legacy knx notify service ([@gjohansson-ST] - [#128185]) ([knx docs]) (breaking-change)
+- Remove legacy notify service from ecobee ([@jpbede] - [#128115]) ([ecobee docs]) (breaking-change)
+- Remove deprecated yaml support from lg_netcast ([@jpbede] - [#128114]) ([lg_netcast docs]) (breaking-change)
+- Fix state for litterrobot ([@gjohansson-ST] - [#128297]) ([litterrobot docs]) (breaking-change)
+- Remove deprecated map integration ([@jpbede] - [#128529]) ([map docs]) (breaking-change)
+- Remove deprecated panel_iframe integration ([@jpbede] - [#128532]) ([panel_iframe docs]) (breaking-change)
+- Add translations for Netatmo thermostat preset modes ([@piitaya] - [#128890]) ([netatmo docs]) (breaking-change)
+- Add update_percentage state attribute to update entity ([@emontnemery] - [#128877]) ([update docs]) (breaking-change)
+- Remove bloomsky integration ([@epenet] - [#129073]) ([bloomsky docs]) (breaking-change)
+- Add config flow to Onkyo ([@Nebula83] - [#117319]) ([onkyo docs]) (breaking-change)
+- Remove deprecated `retries` and `lazy_error_count` yaml option ([@jpbede] - [#128932]) ([modbus docs]) (breaking-change)
+- Omit declined Google Calendar events ([@joelhawksley] - [#128900]) ([google docs]) (breaking-change)
+- Fix visualization by inverting open/closed state of patio awnings ([@mback2k] - [#128079]) ([wmspro docs]) (breaking-change)
+- Change Tibber get_prices action to return datetimes as str ([@functionpointer] - [#123901]) ([tibber docs]) (breaking-change)
+
+{% enddetails %}
+
+
 
 If you are a custom integration developer and want to learn about changes and
 new features available for your integration: Be sure to follow our
