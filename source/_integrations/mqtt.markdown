@@ -698,6 +698,7 @@ support_url:
     'dir_cmd_tpl':         'direction_command_template',
     'dir_stat_t':          'direction_state_topic',
     'dir_val_tpl':         'direction_value_template',
+    'dsp_prc':             'display_precision',
     'e':                   'encoding',
     'en':                  'enabled_by_default',
     'ent_cat':             'entity_category',
