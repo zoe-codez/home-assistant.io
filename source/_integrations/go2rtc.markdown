@@ -31,7 +31,7 @@ The following YAML options are available:
 {% configuration %}
 debug_ui:
   required: false
-  description: Enables the UI of the go2rtc, which helps debugging WebRTC issues. The `debug_ui` should only be enabled during debugging as it will expose port 1984 without any authentication!
+  description: Enables the UI of the go2rtc, which helps debugging WebRTC issues. The `debug_ui` should only be enabled during debugging as it will expose port 11984 without any authentication!
   default: false
   type: boolean
 url:
@@ -40,9 +40,13 @@ url:
   type: string
 {% endconfiguration %}
 
+If you using the go2rtc server managed by Home Assistant, please be aware that all ports are prefixed by `1` compared to the default port settings to avoid port conflicts:
+- Api port `1984` becomes `11984`
+- WebRTC port `8555` becomes `18555`
+
 {% warning %}
 
-The `debug_ui` should only be enabled during debugging as it will expose port 1984 without any authentication!
+The `debug_ui` should only be enabled during debugging as it will expose port 11984 without any authentication!
 Please disable the `debug_ui` immediately after debugging.
 
 {% endwarning %}
