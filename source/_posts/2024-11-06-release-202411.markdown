@@ -13,7 +13,7 @@ categories:
 og_image: /images/blog/2024-11/social.png
 ---
 
-<lite-youtube videoid="x" videotitle="Home Assistant 2024.11 Release Party"></lite-youtube>
+<lite-youtube videoid="rmV4ijEaRtI" videotitle="Home Assistant 2024.11 Release Party"></lite-youtube>
 
 {% note %}
 
