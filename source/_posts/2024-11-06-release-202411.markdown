@@ -62,7 +62,7 @@ Issues introduced in the beta are processed with priority. 🔝
 
 {% tip %}
 
-Don't forget to [join our release party live stream on YouTube](https://www.youtube.com/watch?v=_X2-encNyrA)
+Don't forget to [join our release party live stream on YouTube](https://www.youtube.com/watch?v=rmV4ijEaRtI)
 6 November 2024, at 20:00 GMT / 12:00 PT / 21:00 CET!
 
 {% endtip %}
