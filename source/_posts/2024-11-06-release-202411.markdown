@@ -123,16 +123,19 @@ and improvements to existing ones! You’re all awesome 🥰
 We welcome the following new integrations in this release:
 
 - **[Husqvarna Automower BLE]**, added by [@alistair23]  
-  Integrate your Husqvarna lawnmower using Bluetooth
+  Integrate your Husqvarna lawnmower using Bluetooth.
+- **[LG ThinQ]**, added by [@LG-ThinQ-Integration]  
+  Integrate your LG ThinQ devices, such as air conditioners, refrigerators, and washing machines.
+- **[Palazzetti]**, added by [@dotvav]  
+  Integrate your [Palazzetti pellet stove]; control the stove, fan speeds and get the current temperature.
 
 [@alistair23]: https://github.com/alistair23
+[@dotvav]: https://github.com/dotvav
+[@LG-ThinQ-Integration]: https://github.com/LG-ThinQ-Integration
 [Husqvarna Automower BLE]: /integrations/husqvarna_automower_ble
-
-- Add go2rtc and extend camera integration for better WebRTC support ([@edenhaus] - [#124410]) ([camera docs]) ([rtsp_to_webrtc docs]) (new-integration)
-- Allow SSL security_protocol configuration property in apache_kafka component ([@jkaflik] - [#128651]) ([apache_kafka docs]) (new-integration)
-- Palazzetti integration ([@dotvav] - [#128259]) ([palazzetti docs]) (new-integration)
-- Add LG ThinQ integration ([@LG-ThinQ-Integration] - [#129299]) ([lg_thinq docs]) (new-integration)
-- Add musicassistant integration ([@jozefKruszynski] - [#128919]) ([mass docs]) (new-integration)
+[LG ThinQ]: /integrations/lg_thinq
+[Palazzetti pellet stove]: https://palazzettigroup.com/
+[Palazzetti]: /integrations/palazzetti
 
 ### Noteworthy improvements to existing integrations
 
