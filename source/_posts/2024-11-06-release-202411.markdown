@@ -258,6 +258,17 @@ medium, or high. The hot water status entity has been updated accordingly.
 
 {% enddetails %}
 
+{% details "Google Calendar" %}
+
+Google Calendar events that are declined are now omitted from the calendar.
+
+([@joelhawksley] - [#128900]) ([documentation](/integrations/google))
+
+[@joelhawksley]: https://github.com/joelhawksley
+[#128900]: https://github.com/home-assistant/core/pull/128900
+
+{% enddetails %}
+
 {% details "HomeKit" %}
 
 Historically, many integrations implemented doorbells as binary sensors with a
@@ -265,8 +276,8 @@ device class of occupancy. This design was replaced with the new event entities,
 which use a purpose-built device class of doorbell.
 
 HomeKit will no longer automatically link binary sensors with device class
-occupancy as a linked doorbell sensor. Linked doorbell sensors can continue
-to be configured manually via YAML.
+occupancy as linked doorbell sensors. However, linked doorbell sensors can
+continue to be configured manually via YAML.
 
 ([@bdraco] - [#127668]) ([documentation](/integrations/homekit))
 
@@ -277,8 +288,8 @@ to be configured manually via YAML.
 
 {% details "Litter-Robot" %}
 
-Previously Litter-Robot could use have an off-state. This has now changed to
-`docked` as `off` isn't a valid state for `vacuum` entities.
+Previously, Litter-Robot could have an off state. This has now changed to
+`docked`, as `off` isn’t a valid state for vacuum entities.
 
 ([@gjohansson-ST] - [#128297]) ([documentation](/integrations/litterrobot))
 
@@ -290,13 +301,29 @@ Previously Litter-Robot could use have an off-state. This has now changed to
 {% details "Netatmo" %}
 
 The preset modes of the thermostat have been renamed in order to support
-translations `Schedule`, `Frost guard` and `Manual` has been renamed to
-`schedule`, `frost_guard` and `manual`.
+translations `Schedule`, `Frost guard`, and `Manual` have been renamed to
+`schedule`, `frost_guard`, and `manual`.
 
 ([@piitaya] - [#128890]) ([documentation](/integrations/netatmo))
 
 [@piitaya]: https://github.com/piitaya
 [#128890]: https://github.com/home-assistant/core/pull/128890
+
+{% enddetails %}
+
+{% details "Tibber" %}
+
+The `tibber.get_prices` action has been adjusted to return datetimes as strings
+instead of raw datetime objects.
+
+Automations or template sensors using this may need to be modified with an
+`as_datetime` filter. See our [templating documentation](/docs/configuration/templating/#time)
+for more information on using these filters.
+
+([@functionpointer] - [#123901]) ([documentation](/integrations/tibber))
+
+[@functionpointer]: https://github.com/functionpointer
+[#123901]: https://github.com/home-assistant/core/pull/123901
 
 {% enddetails %}
 
@@ -311,8 +338,8 @@ State attributes of update entities have been changed:
   in progress or an update is in progress but the entity does not support
   reporting progress.
 
-Scripts, automations, custom frontend components etc. which consume the
-`in_progress` state attribute of update entities need to be updated accordingly.
+Scripts, automations, custom frontend components, etc., which consume the
+`in_progress` state attribute of update entities, need to be updated accordingly.
 
 ([@emontnemery] - [#128877]) ([documentation](/integrations/update))
 
@@ -321,48 +348,33 @@ Scripts, automations, custom frontend components etc. which consume the
 
 {% enddetails %}
 
-{% details "all" %}
+{% details "WMS WebControl pro" %}
 
-- Remove the Google Domains integration ([@emontnemery] - [#127278]) ([google_domains docs]) (breaking-change)
-- Add protocol upload / download sensors to Deluge ([@mgrandi] - [#119203]) ([deluge docs]) (breaking-change)
-- Remove Spider integration ([@joostlek] - [#127346]) ([spider docs]) (breaking-change)
-- Remove enigma2 yaml import ([@autinerd] - [#127597]) ([enigma2 docs]) (breaking-change)
-- Remove automatic linkage of doorbells to HomeKit accessories via device class occupancy ([@bdraco] - [#127668]) ([homekit docs]) (breaking-change)
-- Update A. O. Smith integration to reflect upstream API changes ([@bdr99] - [#127678]) ([aosmith docs]) (breaking-change)
-- Remove deprecated yaml import from Habitica ([@tr4nt0r] - [#127946]) ([habitica docs]) (breaking-change)
-- End deprecation for config entry import for folder watcher ([@gjohansson-ST] - [#128056]) ([folder_watcher docs]) (breaking-change)
-- Remove deprecated restart service in modbus ([@gjohansson-ST] - [#128059]) ([modbus docs]) (breaking-change)
-- Remove deprecated speed limit lock entity from tessie ([@jpbede] - [#128043]) ([tessie docs]) (breaking-change)
-- Remove config entry import from lg_netcast ([@gjohansson-ST] - [#128179]) ([lg_netcast docs]) (breaking-change)
-- Remove deprecated notify service in ecobee ([@gjohansson-ST] - [#128177]) ([ecobee docs]) (breaking-change)
-- Remove legacy knx notify service ([@gjohansson-ST] - [#128185]) ([knx docs]) (breaking-change)
-- Remove legacy notify service from ecobee ([@jpbede] - [#128115]) ([ecobee docs]) (breaking-change)
-- Remove deprecated yaml support from lg_netcast ([@jpbede] - [#128114]) ([lg_netcast docs]) (breaking-change)
-- Fix state for litterrobot ([@gjohansson-ST] - [#128297]) ([litterrobot docs]) (breaking-change)
-- Remove deprecated map integration ([@jpbede] - [#128529]) ([map docs]) (breaking-change)
-- Remove deprecated panel_iframe integration ([@jpbede] - [#128532]) ([panel_iframe docs]) (breaking-change)
-- Add translations for Netatmo thermostat preset modes ([@piitaya] - [#128890]) ([netatmo docs]) (breaking-change)
-- Add update_percentage state attribute to update entity ([@emontnemery] - [#128877]) ([update docs]) (breaking-change)
-- Remove bloomsky integration ([@epenet] - [#129073]) ([bloomsky docs]) (breaking-change)
-- Add config flow to Onkyo ([@Nebula83] - [#117319]) ([onkyo docs]) (breaking-change)
-- Remove deprecated `retries` and `lazy_error_count` yaml option ([@jpbede] - [#128932]) ([modbus docs]) (breaking-change)
-- Omit declined Google Calendar events ([@joelhawksley] - [#128900]) ([google docs]) (breaking-change)
-- Fix visualization by inverting open/closed state of patio awnings ([@mback2k] - [#128079]) ([wmspro docs]) (breaking-change)
-- Change Tibber get_prices action to return datetimes as str ([@functionpointer] - [#123901]) ([tibber docs]) (breaking-change)
+The open/closed state of awnings will be inverted so that the UI visualization
+and positioning match reality. This means open (100%) now refers to the awning
+being completely retracted, and closed (0%) now means the awning is fully
+expanded. This is not in line with industry terminology, but Home Assistant
+does not yet natively support awnings of type patio.
+
+([@mback2k] - [#128079]) ([documentation](/integrations/wmspro))
+
+[@mback2k]: https://github.com/mback2k
+[#128079]: https://github.com/home-assistant/core/pull/128079
 
 {% enddetails %}
-
-
 
 If you are a custom integration developer and want to learn about changes and
 new features available for your integration: Be sure to follow our
 [developer blog][devblog]. The following are the most notable for this release:
 
 - [Changes to the UnitOfConductivity enum](https://developers.home-assistant.io/blog/2024/10/08/unit-of-conductivity-changes)
+- [Changes to the update entity](https://developers.home-assistant.io/blog/2024/10/31/update-entity-changes)
 - [Deprecating state constants for cover](https://developers.home-assistant.io/blog/2024/10/08/state-constants-cover-deprecation)
 - [Extend deprecation period of hass.helpers](https://developers.home-assistant.io/blog/2024/10/09/extend-deprecation-hass-helpers)
 - [New alarm control panel state property and state enum](https://developers.home-assistant.io/blog/2024/10/22/new-alarm-state-property)
 - [New helpers and best practises for reauth and reconfigure flows](https://developers.home-assistant.io/blog/2024/10/21/reauth-reconfigure-helpers)
+- [Reauth and reconfigure flows need to be linked to a config entry](https://developers.home-assistant.io/blog/2024/11/04/reauth-reconfigure-entry-id/)
+- [The core config class has been moved](https://developers.home-assistant.io/blog/2024/10/31/core-config-moved)
 
 [devblog]: https://developers.home-assistant.io/blog/
 
