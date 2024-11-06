@@ -86,7 +86,9 @@ Enjoy the (beta) release!
   - [Farewell to the following](#farewell-to-the-following)
 - [Other noteworthy changes](#other-noteworthy-changes)
   - [Live logs](#live-logs)
-  - [Assist for Canadian French](#assist-for-canadian-french)
+- [Voice](#voice)
+  - [Home Assistant intents improvements](#home-assistant-intents-improvements)
+  - [Join the Wake Word Collective](#join-the-wake-word-collective)
 - [Need help? Join the community!](#need-help-join-the-community)
 - [Backward-incompatible changes](#backward-incompatible-changes)
 - [All changes](#all-changes)
@@ -277,16 +279,65 @@ can now view those live! No need to press refresh buttons anymore, and you can s
 
 _**Insert recording of it streaming**_
 
-### Assist for Canadian French
+## Voice
 
-When we started Year of the Voice in early 2023, we took the decision to split French and Canadian French into two separate languages. This decision was unique because we hadn't done this for any other language spoken in more than one country.
+Last year, 2023, was the [Year of the Voice] for Home Assistant. And while this
+year wasn't specifically dedicated to voice, everyone is still working hard
+towards the goal of letting users control their homes with their voice in
+their own language.
 
-Unfortunately, the Canadian French sentences stopped being updated, and a lot of new features never got implemented, such as timers, floor support, and area awareness, to name a few.
-This release, we took the decision to merge both languages, this means that Canadian French users are getting a ton of great new voice features!
+As you might have heard through many community channels 🕵️‍♀️, this will
+become a reality for everyone. We are working hard to get our Home Assistant
+voice satellite hardware ready and available for selling and shipping! 🤗
+
+Stay tuned for more information on that soon!
+
+[Year of the Voice]: /blog/2022/12/20/year-of-voice/
+
+### Home Assistant intents improvements
+
+One of the things we are working on is the Home Assistant intents. This is a
+way for a voice assistant to understand the intention behind your spoken
+sentence. This is a very crucial part of a local voice assistant.
+
+In this release, we decided to align and combine the Canadian French and French
+languages, as they are very similar. This means Canadian French users are
+getting a ton of great new voice features!
 
 ![Screenshot showing a few commands in Canadian French before and after this release](/images/blog/2024-11/canadian-french-on-assist.png)
 
-French language leaders (@piitaya and @jlpouffier) are still looking for a Canadian French volunteer to help them with the French sentences, feel free to ping them if you are interested!
+These intents are built and maintained by the community, and we are very
+grateful for their work. For example, [@piitaya] and [@jlpouffier] have made a
+great effort to lead the French language intents mentioned above.
+
+Nevertheless, we want to ensure everyone can use Home Assistant in their
+own language, **so we need your help**! Help the community by contributing to
+the intents for your language. You can find more information on how to do that
+in our [developer documentation].
+
+[@jlpouffier]: https://github.com/jlpouffier
+[@piitaya]: https://github.com/piitaya
+[developer documentation]: https://developers.home-assistant.io/docs/voice/intent-recognition/contributing
+
+### Join the Wake Word Collective
+
+Another essential part of voice is the Wake Word! And this is where **everyone**,
+no matter your skill level, can help out in just a minute of your time!
+
+Wake words are the words you say to wake up your voice assistant. For example,
+_"Hey Google"_ or _"Alexa"_. As we are building our own voice assistant with
+our own wake words, we need to train our models to recognize these words,
+regardless of your accent, language, gender, or age.
+
+So, get your whole home involved —🏠 Including your kids, your parents,
+friends and family! Take a minute to help us out by recording your voice
+saying the wake word. It is super easy, and you can do it right from your
+browser, no need to install anything!
+
+[**Help us improve our wake words today! ❤️**](https://ohf-voice.github.io/wake-word-collective/)
+
+You can read more about the Wake Word Collective in our
+[dedicated blog post](/blog/2024/10/24/wake-word-collective/).
 
 ## Need help? Join the community!
 
