@@ -278,7 +278,7 @@ changes to existing integrations:
 [SwitchBot Cloud integration]: /integrations/switchbot_cloud
 [SwitchBot integration]: /integrations/switchbot
 [SwitchBot Meter Pro]: https://www.switch-bot.com/products/switchbot-meter-pro
-[Switcher integration]: /integrations/switcher
+[Switcher integration]: /integrations/switcher_kis
 [Switcher Runner S12]: https://switcher.co.il/%D7%9E%D7%95%D7%A6%D7%A8/runner-lights-s12/
 [ViCare integration]: /integrations/vicare
 
