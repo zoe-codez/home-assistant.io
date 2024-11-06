@@ -300,7 +300,7 @@ noteworthy changes:
   use this as a unit for your distance sensors. Thanks [@mib1185]!
 - [@tetele] added [blueprints for template entities]! This allows for easier
   re-use and sharing of common blueprints for sets of templated entities.
-  This feature is an advanced feature and is only available using manual YAML
+  This is an advanced feature and is only available using manual YAML
   configuration.
 - [@MindFreeze] and [@matthiasdebaat] have improved the network settings user
   interface. It is now easier to manage and configure your network settings,
@@ -329,8 +329,8 @@ Sometimes, if something does not work as expected, you might resort to a more te
 tool for finding out what is going on: The logs.
 
 Previously, if you looked at the logs of, for example, an add-on or the Home
-Assistant Supervisor, you would only see the last 100 log lines. You’d had to
-refresh the page to see new log entries.
+Assistant Supervisor, you would only see the last 100 log lines. You would
+have had to refresh the page to see new log entries.
 
 Well, no more! As of this release, the logs are now **streaming live**! 🎉
 
@@ -452,7 +452,7 @@ which use a purpose-built device class of doorbell.
 
 HomeKit will no longer automatically link binary sensors with device class
 occupancy as linked doorbell sensors. However, linked doorbell sensors can
-continue to be configured manually via YAML.
+still be configured manually via YAML.
 
 ([@bdraco] - [#127668]) ([documentation](/integrations/homekit))
 
