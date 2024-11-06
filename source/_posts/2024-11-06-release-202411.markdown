@@ -259,11 +259,19 @@ noteworthy changes this release:
   re-use and sharing of common blueprints for sets of templated entities.
   This feature is an advanced feature and is only available using manual YAML
   configuration.
-- [@MindFreeze] and [@matthiasdebaat] had improved the network settings UI. You 
-  can now see the Netmask of the network interfaces easier.
+- [@MindFreeze] and [@matthiasdebaat] have improved the network settings user
+  interface. It is now easier to manage and configure your network settings,
+  including nicer handling of IP addresses, improved Wi-Fi configuration,
+  and better visibility on the URLs Home Assistant is using for your instance.
+- We now indicate if a custom integration is overriding a built-in integration.
+  This makes it easier to spot if a custom integration is taking over a
+  built-in integration while you are wondering why you didn't get the latest
+  features Home Assistant releases bring. Thanks, [@MindFreeze]!
 
 [(limited) template]: /docs/configuration/templating/#limited-templates
+[@matthiasdebaat]: https://github.com/matthiasdebaat
 [@mib1185]: https://github.com/mib1185
+[@MindFreeze]: https://github.com/MindFreeze
 [@NickM-27]: https://github.com/NickM-27
 [@Petro31]: https://github.com/Petro31
 [@tetele]: https://github.com/tetele
