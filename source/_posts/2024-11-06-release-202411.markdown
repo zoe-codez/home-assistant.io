@@ -273,7 +273,7 @@ changes to existing integrations:
 [Habitica integration]: /integrations/habitica
 [Husqvarna Automower integration]: /integrations/husqvarna_automower
 [LinkPlay integration]: /integrations/linkplay
-[MQTT device based auto discovery]: /integrations/mqtt/#device-discovery-payload
+[MQTT device-based auto discovery]: /integrations/mqtt/#device-discovery-payload
 [Spotify integration]: /integrations/spotify
 [SwitchBot Cloud integration]: /integrations/switchbot_cloud
 [SwitchBot integration]: /integrations/switchbot
