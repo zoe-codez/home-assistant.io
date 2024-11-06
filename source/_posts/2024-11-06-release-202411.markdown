@@ -121,7 +121,7 @@ cards will also be temporarily placed in the imported cards section.
 
 If you love tinkering with your dashboards and fine-tuning card sizes with more
 precision, you now have even more control over the size of cards. In the layout
-options of a card you can now enable “Precise mode”, which will give you tree
+options of a card you can now enable “Precise mode”, which will give you three
 times more options for the card widths!
 
 Precise mode is applied on a card-by-card level. While a normal section is
@@ -289,7 +289,7 @@ of this release:
 ## Other noteworthy changes
 
 There are many more improvements in this release; here are some of the other
-noteworthy changes this release:
+noteworthy changes:
 
 - [Image entities] now have a snapshot action, allowing you to save the current
   image in the entity to a file. Nice [@NickM-27]!
