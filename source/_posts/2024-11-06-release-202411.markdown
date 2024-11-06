@@ -157,11 +157,48 @@ to align 2, 3, 4, or 6 buttons side-by-side.
 
 ## Low latency cameras using WebRTC
 
-Camera streams will now try to use WebRTC whenever possible. WebRTC is an online standard that makes a peer-to-peer connection for lower-latency audio and video streaming. When you’re away from home, it will try to find the fastest and most direct path between your Home Assistant instance and the device you’re using.
+Lots of effort has gone into this new and amazing feature for this release:
+**WebRTC**! 🎉
 
-The Open Home Foundation will host the basic network infrastructure to give all Home Assistant users the capability to use WebRTC for peer-to-peer connections whenever possible. Sometimes, a direct connection between the client and the camera is not possible; in those situations, the stream needs to be relayed by an external server. [Home Assistant Cloud](/cloud/) now provides this relay server, and it's included as one of the many benefits available to subscribers! So, no matter where you are, you should always be able to watch your cameras via this low-latency technology.
+<center><p class='no-shadow'><img class="no-shadow" alt="Logo of WebRTC" src="/images/blog/2024-11/webrtc-logo-horiz-retro.png" /></p></center>
 
-If WebRTC is not available, it will fall back to using the old method of streaming.
+Not sure [what WebRTC is]? No worries! Let us try to explain. If you are
+watching a camera in Home Assistant, you might have noticed it is something
+a bit slow and delayed. WebRTC support is going to change that!
+
+Camera streams will now try to use WebRTC whenever possible.
+[WebRTC is a standard] that makes a peer-to-peer connection for lower-latency
+audio and video streaming. You are probably using this technology a lot already,
+for example, when having an online video call. When you’re away from home,
+it will try to find the fastest and most direct path between your Home Assistant
+instance and the camera you are trying to view.
+
+[The Open Home Foundation] will host the negotiating network infrastructure
+([STUN servers]) **for free for all Home Assistant users** and enable the
+capability to use WebRTC for peer-to-peer connections whenever possible.
+
+<center><p class='no-shadow'><img class="no-shadow" alt="Logo of the Open Home Foundation" src="https://www.openhomefoundation.org/assets/images/logo/open-home-foundation.svg" style="width: 90%" /></p></center>
+
+Sometimes, a direct connection between the client (like your browser
+or mobile app) and the camera is not possible; in those situations, the camera
+stream needs to be relayed by an external server. [Home Assistant Cloud] now
+provides this relay server, and it's **included as one of the many benefits**
+available to all subscribers!
+
+So, no matter where you are, you should always be able to watch your cameras
+via this low-latency technology. If, for whatever reason, WebRTC is not
+available, it will fall back to using the old method of streaming to ensure
+you can always see your camera feeds.
+
+So, after reading all of this, what changed? Well, everything will still look
+and work the same, but your camera feeds will be faster, more responsive, and
+less delayed! 🎉
+
+[Home Assistant Cloud]: /cloud/
+[STUN servers]: https://en.wikipedia.org/wiki/STUN
+[The Open Home Foundation]: https://www.openhomefoundation.org/
+[WebRTC is a standard]: https://webrtc.org/
+[what WebRTC is]: https://en.wikipedia.org/wiki/WebRTC
 
 ## Integrations
 
