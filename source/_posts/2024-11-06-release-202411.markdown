@@ -159,28 +159,57 @@ It is not just new {% term integrations %} that have been added; existing
 integrations are also being constantly improved. Here are some of the noteworthy
 changes to existing integrations:
 
-- Add Light support for Switcher Runner S11 ([@YogevBokobza] - [#126402]) ([switcher_kis docs]) (new-platform)
-- Add power sensor detection in fibaro integration ([@rappenze] - [#126964]) ([fibaro docs])
-- Add support for room sensors in ViCare integration ([@CFenner] - [#125243]) ([vicare docs])
-- Add hotwater storage sensors to ViCare integration ([@CFenner] - [#126570]) ([vicare docs])
-- Add sensor for total installations and integrations to Analytics Insights ([@starkillerOG] - [#127248]) ([analytics_insights docs])
-- Add sensors for gems and mystic hourglasses to Habitica integration ([@tr4nt0r] - [#127651]) ([habitica docs])
-- Add work area sensors to Husqvarna Automower ([@Thomas55555] - [#126931]) ([husqvarna_automower docs])
-- Add sensors to Omada ([@MarkGodwin] - [#127767]) ([tplink_omada docs]) (new-platform)
-- Add audio feature sensors to Spotify ([@joostlek] - [#128785]) ([spotify docs]) (new-platform)
-- Add Airzone Cloud main zone mode select ([@Noltari] - [#125918]) ([airzone_cloud docs])
-- Add Airzone Cloud switch entities to zones ([@Noltari] - [#125917]) ([airzone_cloud docs]) (new-platform)
-- Add 'select' to configure Schlage locks "Auto Lock Time" ([@mxr] - [#123758]) ([schlage docs])
-- Add Meter Pro support to SwitchBot ([@bdraco] - [#128991]) ([switchbot docs]) (noteworthy)
-- Add lock to switchbot_cloud ([@miterion] - [#115128]) ([switchbot_cloud docs]) (new-platform)
-- LinkPlay multiroom support ([@silamon] - [#127862]) ([linkplay docs])
-- Add more spotify sensors ([@joostlek] - [#129215]) ([spotify docs]) (noteworthy)
+- [@joostlek] has extended the [Spotify integration] with a whole bunch of new
+  sensors for the current song playing. You can now, for example, automate
+  putting your house into party mode 🎉 when the song playing is danceable
+  enough 😎 Awesome job!
+- The [LinkPlay integration] now has multiroom support! Group and ungroup your
+  devices to play music in sync or individually straight from Home Assistant.
+  Thanks [@silamon]!
+- Staying in the audio department, [@mj23000] added shuffle and repeat controls
+  to the [Bang & Olufsen integration]. Nice!
+- The [ViCare integration] now supports room sensors and hot water storage
+  sensors. Thanks for that [@CFenner]!
+- [@starkillerOG] added sensors to track the total number of installations and
+  integrations to the [Analytics Insights integration]. Nice!
+- The [Habitica integration] now supports sensors for gems, mystic hourglasses,
+  and calendars for reminders, to-dos, and daily tasks. Thanks [@tr4nt0r]!
+- [@YoavGivati] added support for the [Switcher Runner S12] to the
+  [Switcher integration]. Thanks for that!
+- The [Husqvarna Automower integration] keeps receiving love from [@Thomas55555].
+  This release adds work area and progress sensors. Nice!
+- [@bdraco] added support for the [SwitchBot Meter Pro] to the
+  [SwitchBot integration]. Thanks!
+- The [SwitchBot Cloud integration] now supports locks! Thanks [@miterion]!
+- A little more technical, but [@jbouwh] added support for
+  [MQTT device-based auto discovery]. This allows MQTT devices to be set up
+  and discovered once instead of separately for each entity; which is much
+  more efficient. Nice improvement!
 
-{% details "Potential changes to process" icon="mdi:scale-balance" %}
-
-Processed up to _#129297.
-
-{% enddetails %}
+[@bdraco]: https://github.com/bdraco
+[@CFenner]: https://github.com/CFenner
+[@jbouwh]: https://github.com/jbouwh
+[@joostlek]: https://github.com/joostlek
+[@miterion]: https://github.com/miterion
+[@mj23000]: https://github.com/mj23000
+[@silamon]: https://github.com/silamon
+[@starkillerOG]: https://github.com/starkillerOG
+[@Thomas55555]: https://github.com/Thomas55555
+[@tr4nt0r]: https://github.com/tr4nt0r
+[@YoavGivati]: https://github.com/YoavGivati
+[Analytics Insights integration]: /integrations/analytics_insights
+[Bang & Olufsen integration]: /integrations/bang_olufsen
+[Habitica integration]: /integrations/habitica
+[Husqvarna Automower integration]: /integrations/husqvarna_automower
+[LinkPlay integration]: /integrations/linkplay
+[MQTT device based auto discovery]: /integrations/mqtt/#device-discovery-payload
+[Spotify integration]: /integrations/spotify
+[SwitchBot Cloud integration]: /integrations/switchbot_cloud
+[SwitchBot integration]: /integrations/switchbot
+[SwitchBot Meter Pro]: https://www.switch-bot.com/products/switchbot-meter-pro
+[Switcher integration]: /integrations/switcher
+[Switcher Runner S12]: https://switcher.co.il/%D7%9E%D7%95%D7%A6%D7%A8/runner-lights-s12/
+[ViCare integration]: /integrations/vicare
 
 ### Now available to set up from the UI
 
