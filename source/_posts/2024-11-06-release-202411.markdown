@@ -17,7 +17,7 @@ og_image: /images/blog/2024-11/social.jpg
 
 Home Assistant 2024.11! 🎉
 
-It is November already, and we are closing in on the end of the year, and we are
+It is November already, and we are closing in on the end of the year, but we are
 not slowing down!
 
 Before we dive into what this release has to offer, I want to take a moment to
@@ -181,10 +181,12 @@ and improvements to existing ones! You’re all awesome 🥰
 
 We welcome the following new integrations in this release:
 
+- **[LG ThinQ]**, added by [@LG-ThinQ-Integration]  
+  Integrate your LG ThinQ devices, such as air conditioners, refrigerators,
+  and washing machines. LG built and provided this integration! It's super nice
+  to see a manufacturer providing an integration for Home Assistant.
 - **[Husqvarna Automower BLE]**, added by [@alistair23]  
   Integrate your Husqvarna lawnmower using Bluetooth.
-- **[LG ThinQ]**, added by [@LG-ThinQ-Integration]  
-  Integrate your LG ThinQ devices, such as air conditioners, refrigerators, and washing machines.
 - **[Palazzetti]**, added by [@dotvav]  
   Integrate your [Palazzetti pellet stove]; control the stove, fan speeds and get the current temperature.
 
@@ -216,7 +218,7 @@ changes to existing integrations:
 - [@starkillerOG] added sensors to track the total number of installations and
   integrations to the [Analytics Insights integration]. Nice!
 - The [Habitica integration] now supports sensors for gems, mystic hourglasses,
-  and calendars for reminders, to-dos, and daily tasks. Thanks [@tr4nt0r]!
+  and calendars for to-dos and daily tasks. Thanks [@tr4nt0r]!
 - [@YoavGivati] added support for the [Switcher Runner S12] to the
   [Switcher integration]. Thanks for that!
 - The [Husqvarna Automower integration] keeps receiving love from [@Thomas55555].
@@ -334,7 +336,7 @@ Well, no more! As of this release, the logs are now **streaming live**! 🎉
 
 <p class='img no-shadow'><img class="no-shadow" alt="Screenshot of the imported cards section" src="/images/blog/2024-11/streaming-live-logs.gif"/>Screen recording demonstrating logs showing up as they happen.</p>
 
-And not just that, you can scroll back in time to see previous log items.  
+And not just that, you can scroll back in time to see previous log items.
 That's a pretty cool improvement. 😎
 
 ## Voice
@@ -344,7 +346,8 @@ year isn't specifically dedicated to voice, everyone is still working hard
 towards the goal of letting users control their homes with their voice in
 their own language.
 
-As you might have heard through many community channels 🕵️‍♀️, we are working to make this a reality for everyone. We are hard at work getting our Home Assistant
+As you might have heard through many community channels 🕵️‍♀️, we are working to
+make this a reality for everyone. We are hard at work getting our Home Assistant
 voice satellite hardware ready and available for selling and shipping! 🤗
 
 Stay tuned for more information on that soon!
