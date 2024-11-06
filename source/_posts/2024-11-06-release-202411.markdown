@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "2024.11: Beta release notes"
-description: "Beta release notes for Home Assistant 2024.11"
-date: 2024-10-30 00:00:00
+title: "2024.11: Slick dashboards and speedy cameras"
+description: "Our new sections dashboards are now out of experimental and have become the default, low-latency camera streams using WebRTC, live streaming logs, Home Assistant Voice updates, and much more!"
+date: 2024-11-06 00:00:00
 date_formatted: "November 6, 2024"
 author: Franck Nijhof
 author_twitter: frenck
@@ -15,63 +15,36 @@ og_image: /images/blog/2024-11/social.jpg
 
 <lite-youtube videoid="rmV4ijEaRtI" videotitle="Home Assistant 2024.11 Release Party"></lite-youtube>
 
-{% note %}
-
-**Welcome to the beta release notes for Home Assistant 2024.11** 🎉
-
-<br />
-
-Please note that these release notes are a work in progress. 👷‍♀️ We will be
-completing them over the next couple of days. Not all features might be final
-yet, and some features _**may not** make it into the final release_.
-
-<br />
-
-**Want to help test the beta?** Awesome! ❤️ We have documented how you
-[can join our beta channel and install the beta here](/common-tasks/os/#running-a-beta-version).
-
-<br />
-
-While running the beta, we highly recommend joining our _#beta_ channel on
-the [Home Assistant Discord chat](/join-chat)! 💬 Most developers and beta
-testers are in this channel during the beta period to share experiences, ideas,
-and iterate over new features, fine-tuning them before the final release.
-It's a really fun place to hang out. 😎
-
-<br />
-
-**Reporting issues**: As this is a beta test, you might encounter unexpected
-behavior or issues. 🐞 We use the GitHub issue tracker to track beta issues.
-You can find our issue trackers and the reported issues during beta here:
-
-<br />
-
-- [Report(ed) beta **dashboards/UI/frontend** issues](https://github.com/home-assistant/frontend/milestone/125)
-- [Report(ed) beta **integrations/automations/backend/core** issues](https://github.com/home-assistant/core/milestone/699)
-- [Report(ed) beta **documentation** issues](https://github.com/home-assistant/home-assistant.io/milestone/132)
-
-🙏 When reporting issues, **make sure to mention the exact beta version you are
-running** in the issue description. This will help us identify and track the
-issue correctly. Read more about [reporting issues here](/help/reporting_issues/).
-
-<br />
-
-Issues introduced in the beta are processed with priority. 🔝
-
-{% endnote %}
-
-{% tip %}
-
-Don't forget to [join our release party live stream on YouTube](https://www.youtube.com/watch?v=rmV4ijEaRtI)
-6 November 2024, at 20:00 GMT / 12:00 PT / 21:00 CET!
-
-{% endtip %}
-
 Home Assistant 2024.11! 🎉
 
-Enjoy the (beta) release!
+It is November already, and we are closing in on the end of the year, and we are
+not slowing down!
+
+Before we dive into what this release has to offer, I want to take a moment to
+thank everyone who has contributed to the Home Assistant project. You might
+have heard this already, but going to share it again:
+
+_**We are number one!** 🥇_
+
+GitHub published its annual [Octoverse report], highlighting the platform's
+biggest trends and projects. It named Home Assistant 2024's largest open-source
+project, with over 21,000 contributors over the year. **That includes you! ❤️**
+
+Continuing the festivities, this release is a big one! The new dashboarding
+system we have been working on all year is now out of its experimental phase
+and generally available! 🥳 Exciting, **everyone** can now create beautiful
+dashboards with ease!
+
+To top it off, this release also supports faster and lower-latency camera
+streams using WebRTC, supported by the [Open Home Foundation].
+This is a huge improvement! 🎉
+
+Enjoy the release!
 
 ../Frenck
+
+[Open Home Foundation]: https://www.openhomefoundation.org/
+[Octoverse report]: https://github.blog/news-insights/octoverse/octoverse-2024/
 
 <!--more-->
 
