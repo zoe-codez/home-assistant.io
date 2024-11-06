@@ -3,12 +3,15 @@ title: Cambridge Audio
 description: Instructions on how to integrate Cambridge Audio Receivers into Home Assistant.
 ha_category:
   - Media player
+  - Select
 ha_release: '2024.10'
 ha_iot_class: Local Push
 ha_domain: cambridge_audio
 ha_platforms:
   - diagnostics
   - media_player
+  - select
+  - switch
 ha_codeowners:
   - '@noahhusby'
 ha_config_flow: true
@@ -48,6 +51,51 @@ Host:
     type: string
 {% endconfiguration_basic %}
 
+## Available configuration entities
+
+The integration provides a few entities to configure the device settings. The following entities are supported:
+
+- Display brightness
+- Pre-Amp
+- Early update
+- Audio output (Speaker select)
+
+## Playing media
+
+Cambridge Audio supports playing a variety of formats using the `media_player.play_media` action. 
+
+### Examples:
+
+Cambridge Audio can recall any stored presets saved on the device. An example action using a preset:
+```yaml
+action: media_player.play_media
+target:
+  entity_id: media_player.cambridge_audio
+data:
+  media_content_type: "preset"
+  media_content_id: "1"
+```
+
+An example action using an Airable radio ID:
+
+```yaml
+action: media_player.play_media
+target:
+  entity_id: media_player.cambridge_audio
+data:
+  media_content_type: "airable"
+  media_content_id: "12345678"
+```
+
+An example action using an internet radio url:
+```yaml
+action: media_player.play_media
+target:
+  entity_id: media_player.cambridge_audio
+data:
+  media_content_type: "internet_radio"
+  media_content_id: "https://example.com/internet-radio/station_abcd.mp3"
+```
 ## Troubleshooting
 
 ### The buttons to skip, shuffle, and repeat the track are missing

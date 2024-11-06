@@ -4,6 +4,7 @@ description: Instructions on enabling Habitica support for your Home Assistant
 ha_category:
   - To-do list
   - Sensor
+  - Calendar
 ha_release: 0.78
 ha_iot_class: Cloud Polling
 ha_domain: habitica
@@ -12,6 +13,7 @@ ha_platforms:
   - sensor
   - switch
   - todo
+  - calendar
 ha_codeowners:
   - '@ASMfreaK'
   - '@leikoilja'
@@ -54,6 +56,8 @@ The Habitca {% term integration %} enables you to monitor your adventurer's prog
 - **Next level:** Indicates the remaining experience points needed to reach the next level (for example, "440 XP").
 - **Habits:** Shows the number of habits being tracked (for example, "4 tasks").
 - **Rewards:** Displays the rewards that can be redeemed (for example, "1 task")
+- **Gems:** Shows the total number of gems currently owned by your Habitica character, used for purchasing items and customizations.
+- **Mystic hourglasses:** Displays the number of mystic hourglasses earned as a subscriber, which can be redeemed for exclusive items from past events.
 
 ## To-do lists
 
@@ -62,6 +66,11 @@ The following Habitica tasks are available as to-do lists in Home Assistant. You
 - **To-Do's:** Displays a comprehensive list of active and completed to-dos. Each to-do includes its due date if applicable, allowing you to check them off, edit them, delete them, and create new to-dos seamlessly.
 - **Dailies:** Shows the daily tasks that need to be completed today or in the future. Tasks completed yesterday can still be marked off as "yesterdailies" until a new day starts.
 
+## Calendars
+
+- **To-Do calendar:** Lists the due dates for all active to-do tasks. Each event on this calendar represents a to-do item that has a set due date, making it easy to track upcoming deadlines and plan accordingly.
+- **Dailies calendar:** Displays all daily tasks that are scheduled for today and are still active. It also shows all tasks scheduled for future dates, helping you stay organized and track upcoming routines. The calendar sensor will be active if there are unfinished tasks for today and display the next due daily (based on sort order if there are multiple tasks due for that day).
+
 ## Button controls
 
 - **Start my day:** Initiates daily routine actions in Habitica, including resetting your dailies, deal damage from unfinished dailies and quest bosses, habits adjustment, buff expiration, and mana regeneration based on completed dailies.
@@ -69,9 +78,57 @@ The following Habitica tasks are available as to-do lists in Home Assistant. You
 - **Buy a health potion:** Allows your character to purchase a health potion in Habitica. Instantly applies the potion upon purchase, healing 15 HP at a cost of 25 GP.
 - **Allocate all stat points**: Assigns all unallocated stat points based on the previously set automatic allocation method. If no method is set, all points are assigned to strength (STR).
 
+## Button controls for class skills
+
+If you've unlocked the class system, button controls for casting player and party skills will become available, depending on the class you've selected. For task skills see [action `habitica.cast_skill`](#action-habiticacast_skill)
+
+### Mage
+
+- **Ethereal surge**: You sacrifice Mana so the rest of your party, except for other mages, gains MP. (based on: INT)
+- **Earthquake**: Your mental power shakes the earth and buffs your party's intelligence. (based on: unbuffed INT)
+- **Chilling frost:** With one cast, ice freezes all your streaks so they won't reset to zero tomorrow.
+
+### Warrior
+
+- **Defensive stance**: You crouch low and gain a buff to constitution. (based on: unbuffed CON)
+- **Valorous presence**: Your boldness buffs your whole party's strength. (based on: unbuffed STR)
+- **Intimidating gaze:** Your fierce stare buffs your whole Party's constitution. (based on: unbuffed CON)
+
+### Rogue
+
+- **Tools of the trade**: Your tricky talents buff your whole party's perception. (based on: unbuffed PER)
+- **Stealth**: With each cast, a few of your undone dailies won't cause damage tonight. Their streaks and colors won't change. (based on: PER)
+
+### Healer
+
+- **Healing light**: Shining light restores your health. (based on: CON and INT)
+- **Searing brightness**: A burst of light makes your tasks more blue/less red. (based on: INT)
+- **Protective aura**: You shield your party by buffing their constitution. (based on: unbuffed CON)
+- **Blessing**: Your soothing spell restores your whole party's health. (based on: CON and INT)
+
 ## Switch controls
 
-- **Rest in the Inn:** When enabled, allows your character to rest in the inn in Habitica, pausing damage dealt from dailies and quest bosses.
+- **Rest in the Inn**: When enabled, allows your character to rest in the inn in Habitica, pausing damage dealt from dailies and quest bosses.
+
+## Actions
+
+### Action `habitica.cast_skill`
+
+Use a skill or spell from your Habitica character on a specific task to affect its progress or status.
+
+| Data attribute | Optional |  Description                                                                                                      |
+| -------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| `config_entry` | no       |  Config entry of the character to cast the skill.                                                                 |
+| `skill`        | no       |  Skill or spell you want to cast on the task. Only skills available to your character's class can be used.        |
+| `task`         | no       |  The name of the task to target. Alternatively, you can use the `task ID` or **alias**. Supported task types are **to-do**, **habit**, and **daily**. |
+
+#### Available skills
+
+- **Rogue:** `pickpocket`, `backstab`
+- **Warrior:** `smash`
+- **Mage:** `fireball`
+
+To use task aliases, make sure **Developer Mode** is enabled under [**Settings -> Site Data**](https://habitica.com/user/settings/siteData). Task aliases can only be edited via the **Habitica** web client.
 
 ## Automations
 
