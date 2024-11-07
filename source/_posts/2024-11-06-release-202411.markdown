@@ -219,7 +219,7 @@ changes to existing integrations:
   integrations to the [Analytics Insights integration]. Nice!
 - The [Habitica integration] now supports sensors for gems, mystic hourglasses,
   and calendars for to-dos and daily tasks. Thanks [@tr4nt0r]!
-- [@YoavGivati] added support for the [Switcher Runner S12] to the
+- [@YogevBokobza] added support for the [Switcher Runner S12] to the
   [Switcher integration]. Thanks for that!
 - The [Husqvarna Automower integration] keeps receiving love from [@Thomas55555].
   This release adds work area and progress sensors. Nice!
@@ -241,7 +241,7 @@ changes to existing integrations:
 [@starkillerOG]: https://github.com/starkillerOG
 [@Thomas55555]: https://github.com/Thomas55555
 [@tr4nt0r]: https://github.com/tr4nt0r
-[@YoavGivati]: https://github.com/YoavGivati
+[@YogevBokobza]: https://github.com/YoavGivati
 [Analytics Insights integration]: /integrations/analytics_insights
 [Bang & Olufsen integration]: /integrations/bang_olufsen
 [Habitica integration]: /integrations/habitica
