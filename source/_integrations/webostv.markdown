@@ -67,6 +67,43 @@ Any other [actions](/docs/automation/action/) to power on the device can be conf
 
 It is possible to select which sources will be available to the media player. When the TV is powered on press the **CONFIGURE** button in the {% term integration %} card and select the sources to enable. If you don't select any source the media player will offer all of the sources of the TV.
 
+### Switching source with automation
+
+Imagine you want your LG TV to automatically switch to a specific source when it turns on. Below is a simple automation example that launches `YouTube` after the TV is switched on.
+It leverages `select_source` action from the [Media player](/integrations/media_player/) integration to launch a specific app installed on your LG TV.
+
+To find available sources for your TV
+
+1. Go to {% my developer_states title="**Developer Tools** > **States**" %}.
+2. Find your TV's media_player entity.
+3. Look for the `source_list` attribute which contains all available sources.
+   
+{% tip %}
+Source list example: `source_list: ARD Mediathek, Apps, HDMI 1, Home Dashboard, JBL Bar 1300, Media Player, Netflix, Prime Video, Public Value, Spotify - Music and Podcasts, Timer, Web Browser, YouTube, ZDFmediathek`
+{% endtip %} 
+
+The automation can be created entirely through the Home Assistant UI. When setting it up, you'll only need to manually enter the source name (for example, "YouTube") in the action configuration. Below is the YAML code generated as a result:
+
+```yml
+alias: Switch TV source to YouTube by Default
+description: 'Regardless if started from TV remote or via wake-on-lan, the TV will switch to YouTube right after it is on'
+triggers:
+  - device_id: <TV DEVICE ID>
+    domain: media_player
+    entity_id: <TV MEDIA PLAYER ENTITY ID>
+    type: turned_on
+    trigger: device
+conditions: []
+actions:
+  - action: media_player.select_source
+    metadata: {}
+    data:
+      source: YouTube
+    target:
+      device_id: <TV DEVICE ID>
+mode: single
+```
+
 ## Change channel through play_media action
 
 The `play_media` action can be used in a script to switch to the specified TV channel. It selects the best matching channel according to the `media_content_id` parameter:
