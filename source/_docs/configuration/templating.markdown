@@ -106,6 +106,10 @@ Extensions allow templates to access all of the Home Assistant specific states a
 
 Templates for some [triggers](/docs/automation/trigger/) as well as `trigger_variables` only support a subset of the Home Assistant template extensions. This subset is referred to as "Limited Templates".
 
+### This
+
+State-based and trigger-based template entities have the special template variable `this` available in their templates and actions. See more details and examples in the [Template integration documentation](/integrations/template).
+
 ### States
 
 Not supported in [limited templates](#limited-templates).
