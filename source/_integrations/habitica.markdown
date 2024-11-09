@@ -136,9 +136,97 @@ Use a skill or spell from your Habitica character on a specific task to affect i
 
 To use task aliases, make sure **Developer Mode** is enabled under [**Settings -> Site Data**](https://habitica.com/user/settings/siteData). Task aliases can only be edited via the **Habitica** web client.
 
+### Action `habitica.accept_quest`
+
+Accept a pending invitation to a quest. For an example, see the [`Auto-accept quest invitation`](#auto-accept-quest-invitation) automation, which demonstrates how this action can be used to automatically accept quest invitations.
+
+| Data attribute | Optional | Description                                                    |
+| -------------- | -------- | -------------------------------------------------------------- |
+| `config_entry` | no       | Config entry of the character to accept the quest.             |
+
+### Action `habitica.reject_quest`
+
+Reject a pending invitation to a quest.
+
+| Data attribute | Optional | Description                                                    |
+| -------------- | -------- | -------------------------------------------------------------- |
+| `config_entry` | no       | Config entry of the character to reject the quest.             |
+
+### Action `habitica.leave_quest`
+
+Leave the current quest you are participating in.
+
+| Data attribute | Optional | Description                                                    |
+| -------------- | -------- | -------------------------------------------------------------- |
+| `config_entry` | no       | Config entry of the character to leave the quest.              |
+
+### Action `habitica.abort_quest` 🔒
+
+Terminate your party's ongoing quest. All progress will be lost, and the quest roll returned to the owner's inventory. Only the quest leader or group leader can perform this action.
+
+| Data attribute | Optional | Description                                                    |
+| -------------- | -------- | -------------------------------------------------------------- |
+| `config_entry` | no       | Config entry of the character to abort the quest.              |
+
+{% note %}
+Actions marked with 🔒 have usage restrictions. See action descriptions for details.
+{% endnote %}
+
+### Action `habitica.start_quest` 🔒
+
+Begin the quest immediately, bypassing any pending invitations that haven't been accepted or rejected. Only the quest leader or group leader can perform this action.
+
+| Data attribute | Optional | Description                                                    |
+| -------------- | -------- | -------------------------------------------------------------- |
+| `config_entry` | no       | Config entry of the character to force-start the quest.        |
+
+### Action `habitica.cancel_quest` 🔒
+
+Cancel a quest that has not yet started. All accepted and pending invitations will be canceled, and the quest roll returned to the owner's inventory. Only the quest leader or group leader can perform this action.
+
+| Data attribute | Optional | Description                                                    |
+| -------------- | -------- | -------------------------------------------------------------- |
+| `config_entry` | no       | Config entry of the character to cancel the quest.             |
+
 ## Automations
 
 Get started with these automation examples for Habitica, each featuring ready-to-use blueprints!
+
+### Auto-accept quest invitation
+
+Automatically accepts quest invitations from your Habitica party and creates a persistent notification to inform you when a quest has been successfully accepted.
+
+{% my blueprint_import badge blueprint_url="https://community.home-assistant.io/t/habitica-auto-accept-quest-invitation/791002" %}
+
+{% details "Example YAML configuration" %}
+
+{% raw %}
+
+```yaml
+triggers:
+  - trigger: state
+    entity_id: binary_sensor.habitica_pending_quest_invitation
+    from: "off"
+    to: "on"
+actions:
+  - action: habitica.accept_quest
+    data:
+      config_entry: config_entry_id
+    response_variable: action_response
+  - action: notify.persistent_notification
+    data:
+      title: You have been invited to a quest!
+      message: >-
+        ![{{action_response["key"]}}](https://habitica-assets.s3.amazonaws.com/mobileApp/images/inventory_quest_scroll_{{action_response["key"]}}.png)
+
+        The invitation has been accepted, and the quest {% if
+        action_response["active"] %}has already started{% else %}is waiting
+        for other party members to join{% endif %}.
+```
+
+{% endraw %}
+
+{% enddetails %}
 
 ### Create "Empty the dishwasher" to-do
 
