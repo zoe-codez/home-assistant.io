@@ -15,6 +15,7 @@ ha_quality_scale: silver
 ha_platforms:
   - binary_sensor
   - climate
+  - switch
 ---
 
 The `eq3btsmart` climate platform allows you to integrate eQ-3 Bluetooth Smart Thermostats.
