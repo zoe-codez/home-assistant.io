@@ -123,7 +123,7 @@ We implemented timers, allowing any voice assistant device to “ring” when a 
 
 We also brought the ability to control media via voice. Pausing or resuming them, controlling the volume, and going to the next track. This, combined with the area awareness capability mentioned above made for some really interesting short commands that work in a room with a TV playing or music streaming, such as “Pause”, “Resume” and “Next”.
 
-Finally, our on-device wake word engine called microWakeWord became much faster and much better at recognizing wake words. This is the result of using real voice data in the training process to fine-tune the models. With [Wake Word Collective](https://ohf-voice.github.io/wake-word-collective/), you can now contribute by lending your voice to improve our community-driven, privacy-focused voice assistant! You can read more about it in [this blog post](/2024/10/24/wake-word-collective/).
+Finally, our on-device wake word engine called microWakeWord became much faster and much better at recognizing wake words. This is the result of using real voice data in the training process to fine-tune the models. With [Wake Word Collective](https://ohf-voice.github.io/wake-word-collective/), you can now contribute by lending your voice to improve our community-driven, privacy-focused voice assistant! You can read more about it in [this blog post](/blog/2024/10/24/wake-word-collective/).
 
 #### In progress: Make Assist easier to start with
 
