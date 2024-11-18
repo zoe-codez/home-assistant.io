@@ -3,12 +3,14 @@ title: Acaia
 description: Instructions on how to integrate your Acaia smart coffee scale with Home Assistant.
 ha_release: 2024.12
 ha_category:
+  - Binary sensor
   - Button
   - Sensor
 ha_iot_class: Local Push
 ha_config_flow: true
 ha_domain: acaia
 ha_platforms:
+  - binary_sensor
   - button
   - sensor
 ha_bluetooth: true
@@ -29,6 +31,10 @@ MAC:
 {% endconfiguration_basic %}
 
 # Available platforms & entities
+
+## Binary sensors
+
+- **Timer running**: Whether the timer is currently running on the scale
 
 ## Buttons
 
