@@ -58,6 +58,13 @@ Host:
   type: boolean
 {% endconfiguration_basic %}
 
+{% include integrations/option_flow.md %}
+
+{% configuration_basic %}
+Use Bluetooth:
+  description: Allows you to manually disable Bluetooth communication with the machine (if available). This can be used to avoid longer timeouts, e.g., when your machine is only sometimes in range.
+{% endconfiguration_basic %}
+
 # Available platforms & entities
 
 ## Buttons
