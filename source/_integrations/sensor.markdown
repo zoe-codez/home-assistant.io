@@ -50,6 +50,7 @@ The following device classes are supported for sensors:
 - **None**: Generic sensor. This is the default and doesn't need to be set.
 - **apparent_power**: Apparent power in VA.
 - **aqi**: Air Quality Index (unitless).
+- **area**: Area in m², cm², km², mm², in², ft², yd², mi², ac, ha
 - **atmospheric_pressure**: Atmospheric pressure in cbar, bar, hPa, mmHg, inHg, kPa, mbar, Pa or psi
 - **battery**: Percentage of battery that is left in %
 - **blood_glucose_concentration**: Blood glucose concentration in mg/dL, mmol/L

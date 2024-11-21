@@ -41,6 +41,7 @@ The following device classes are supported for numbers:
 - **None**: Generic number. This is the default and doesn't need to be set.
 - **apparent_power**: Apparent power in VA.
 - **aqi**: Air Quality Index (unitless).
+- **area**: Area in m², cm², km², mm², in², ft², yd², mi², ac, ha
 - **atmospheric_pressure**: Atmospheric pressure in cbar, bar, hPa, inHg, kPa, mbar, Pa, psi
 - **battery**: Percentage of battery that is left
 - **blood_glocose_concentration**: Blood glucose concentration in mg/dL, mmol/L
