@@ -10,7 +10,7 @@ ha_domain: bang_olufsen
 ha_platforms:
   - media_player
 ha_codeowners:
-  - '@mj23000'
+  - "@mj23000"
 ha_config_flow: true
 ha_zeroconf: true
 ha_integration_type: device
@@ -33,7 +33,7 @@ Devices that have been tested and _should_ work without any trouble are:
 - [Beosound Level](https://www.bang-olufsen.com/en/dk/speakers/beosound-level)
 - [Beosound Theatre](https://www.bang-olufsen.com/en/dk/soundbars/beosound-theatre)
 
-and any other Mozart based products.
+and any other [Mozart](https://support.bang-olufsen.com/hc/en-us/articles/24766979863441-Which-platform-is-my-Connected-Audio-product-based-on) based products. This means all [Connected Speakers](https://www.bang-olufsen.com/en/dk/story/connected-speakers) that have been launched after 2020.
 
 {% include integrations/config_flow.md %}
 
@@ -47,7 +47,6 @@ Device model:
   required: true
   type: string
 {% endconfiguration_basic %}
-
 
 ## Actions
 
@@ -197,7 +196,7 @@ Bang & Olufsen Cloud TTS messages are limited to 100 unique messages a day and a
 
 Extra keys available:
 
-| Data attribute    | Optional | Description                                                                                       |
+| Data attribute            | Optional | Description                                                                                       |
 | ------------------------- | -------- | ------------------------------------------------------------------------------------------------- |
 | `overlay_absolute_volume` | yes      | Specify an absolute volume for the overlay.                                                       |
 | `overlay_offset_volume`   | yes      | Specify a volume offset to be added to the current volume level.                                  |
@@ -234,6 +233,7 @@ data:
 ```
 
 Playing a Bang & Olufsen Cloud TTS message with a local language:
+
 ```yaml
 action: media_player.play_media
 target:
@@ -257,4 +257,5 @@ To find Deezer playlist, album URIs, and user IDs for Deezer flows, the Deezer w
 Additionally a Deezer user ID can be found at <https://www.deezer.com/en/profile/USER_ID> by selecting the active user in a web browser.
 
 ### Getting Tidal URIs
+
 Tidal playlists, album URIs and track IDs are available via the Tidal website. When navigating to an album, the URL will look something like <https://listen.tidal.com/album/ALBUM_ID/>, and this needs to be converted to `album:ALBUM_ID`. The same applies to playlists, which have the format `playlist:PLAYLIST_ID`. Individual tracks can be found by sharing the track and selecting the `Copy track link` method, which should yield a link of the format <https://tidal.com/browse/track/TRACK_ID?u>, this can be played by extracting the track id `TRACK_ID`.
