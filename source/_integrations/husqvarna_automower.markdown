@@ -219,3 +219,14 @@ data:
     minutes: 30
   work_area_id: 123456 ### Work area ID for the "Front lawn" from the example above.
 ```
+
+## Known limitations
+
+- The mower can only be started using the `lawn_mower.start_mowing` action during the schedules configured in the Automower Connect App. To start the mower outside the scheduled times, use the `husqvarna_automower.override_schedule` action. In both cases, the battery must be fully charged beforehand.
+- Stay-out zone handling is not supported for mowers equipped with EPOS technology.
+
+## Remove integration
+
+This integration can be removed by following these steps:
+
+{% include integrations/remove_device_service.md %}
