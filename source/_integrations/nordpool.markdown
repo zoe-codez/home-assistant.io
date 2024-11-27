@@ -12,8 +12,9 @@ ha_codeowners:
   - '@gjohansson-ST'
 ha_domain: nordpool
 ha_platforms:
+  - diagnostics
   - sensor
-ha_integration_type: integration
+ha_integration_type: hub
 ---
 
 The **Nord Pool** {% term integration %} integrates [Nord Pool Group](https://www.nordpoolgroup.com/) energy prices into Home Assistant.

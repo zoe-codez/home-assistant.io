@@ -2,22 +2,21 @@
 title: Habitica
 description: Instructions on enabling Habitica support for your Home Assistant
 ha_category:
-  - To-do list
-  - Sensor
   - Calendar
+  - Sensor
+  - To-do list
 ha_release: 0.78
 ha_iot_class: Cloud Polling
 ha_domain: habitica
 ha_platforms:
   - binary_sensor
   - button
+  - calendar
+  - diagnostics
   - sensor
   - switch
   - todo
-  - calendar
 ha_codeowners:
-  - '@ASMfreaK'
-  - '@leikoilja'
   - '@tr4nt0r'
 ha_config_flow: true
 ha_integration_type: integration

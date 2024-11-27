@@ -12,6 +12,7 @@ ha_domain: acaia
 ha_platforms:
   - binary_sensor
   - button
+  - diagnostics
   - sensor
 ha_bluetooth: true
 ha_codeowners:

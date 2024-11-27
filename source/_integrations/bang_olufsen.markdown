@@ -8,10 +8,10 @@ ha_release: 2024.2
 ha_iot_class: Local Push
 ha_domain: bang_olufsen
 ha_platforms:
-  - media_player
   - diagnostics
+  - media_player
 ha_codeowners:
-  - "@mj23000"
+  - '@mj23000'
 ha_config_flow: true
 ha_zeroconf: true
 ha_integration_type: device

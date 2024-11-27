@@ -18,8 +18,10 @@ ha_codeowners:
 ha_config_flow: true
 ha_platforms:
   - binary_sensor
+  - diagnostics
   - light
   - number
+  - select
   - sensor
   - switch
   - time
