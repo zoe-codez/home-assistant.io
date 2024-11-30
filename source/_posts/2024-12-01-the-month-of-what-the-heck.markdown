@@ -2,7 +2,7 @@
 title: The month of 'What the Heck?!' 2024
 description: "Ever felt that 'What the heck Home Assistant?!' moment? This month, we would like to learn about your 'what the heck?!' moments..."
 date: 2024-11-30 00:00:00
-date_formatted: "november 31, 2024"
+date_formatted: "November 31, 2024"
 author: Franck Nijhof
 author_twitter: frenck
 categories: Announcements
