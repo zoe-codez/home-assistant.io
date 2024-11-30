@@ -179,7 +179,7 @@ So, when does Home Assistant trigger this moment for you?
   in general, simply too much to address. However, we have picked up a lot of
   items over the years (including bigger topics); it helps us shape our roadmap.
 
-<br />
+<br /><a name='no-new-integrations'></a>
 
 - **_"I really want this new integration or add-on to be implemented, so I can
   use my devices. Is this the right place for it?”_**
