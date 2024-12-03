@@ -41,12 +41,8 @@ and any other [Mozart](https://support.bang-olufsen.com/hc/en-us/articles/247669
 {% configuration_basic %}
 IP Address:
   description: The IP address of your device. Can be found by navigating to the device on the [Bang & Olufsen app](https://www.bang-olufsen.com/en/dk/story/apps) and selecting `Settings` → `About` → `IP address`.
-  required: true
-  type: string
 Device model:
   description: The model name of your Bang & Olufsen device. This is used to determine some capabilities of the device. If the device is not in the list yet, choose a product similar to yours.
-  required: true
-  type: string
 {% endconfiguration_basic %}
 
 ## Data updates
@@ -319,8 +315,8 @@ beolink:
 The **Bang & Olufsen** integration supports [Home Assistant debug logs and diagnostics](/docs/configuration/troubleshooting/#debug-logs-and-diagnostics).
 Where all received WebSocket events are provided through debug logs and the WebSocket connection state, config entry and media player state is provided through diagnostics.
 
-## Remove integration
+## Removing the integration
 
-This integration follows standard integration removal, no extra steps are required.
+This integration follows standard integration removal. No extra steps are required.
 
 {% include integrations/remove_device_service.md %}
