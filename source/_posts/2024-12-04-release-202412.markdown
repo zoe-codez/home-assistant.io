@@ -553,9 +553,11 @@ If you are a custom integration developer and want to learn about changes and
 new features available for your integration: Be sure to follow our
 [developer blog][devblog]. The following are the most notable for this release:
 
+- [Camera API changes](https://developers.home-assistant.io/blog/2024/11/26/camera-deprecations)
 - [Integration quality scale](https://developers.home-assistant.io/blog/2024/11/20/integration-quality-scale)
 - [New options flow properties](https://developers.home-assistant.io/blog/2024/11/12/options-flow/)
 - [Translating units of measurement](https://developers.home-assistant.io/blog/2024/11/21/unit-of-measurement-translations)
+- [Utility function homeassistant.util.dt.utc_to_timestamp is deprecated](https://developers.home-assistant.io/blog/2024/11/28/dt-util-utc-to-timestamp-deprecation/)
 
 [devblog]: https://developers.home-assistant.io/blog/
 
