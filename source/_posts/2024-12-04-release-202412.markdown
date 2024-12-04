@@ -263,7 +263,7 @@ oto improving their integrations. To help with that, we have now
 [extensively documented every rule and requirement for each tier in our
 developer documentation].
 
-[each integration documentation page]: /integration/homewizard
+[each integration documentation page]: /integrations/homewizard
 [Integration Quality Scale page]: /docs/quality_scale/
 [extensively documented every rule and requirement for each tier in our developer documentation]: https://developers.home-assistant.io/docs/core/integration-quality-scale/#integration-quality-scale-rules 
 
@@ -396,16 +396,10 @@ However, we still have some edge cases, where we are not able to provide
 translations for everything. One of those edge cases is the units of
 measurement. 📏
 
-Although units do not need translation (like °C or kWh) in most cases, many
+Although units do not need translation (like `°C` or `kWh`) in most cases, many
 sensors in a home might use specific and non-standardized units. For example,
 a sensor that measures the number of “people” in a home or one that tells you
 how many “movies” are in your collection.
-
-Although for most cases, units do not need translation (like `°C` or `kWh`),
-there are many sensors in ones home that might use units that are specific
-and not standarized. For example, a sensor that measures the amount of
-"people" in a home, or one that tells you how many "movies" are in your
-collection.
 
 So, suppose you now have a sensor with a custom measurement unit, like the
 amount of “movies” in your collection. In that case, integrations can now
