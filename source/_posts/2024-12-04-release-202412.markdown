@@ -93,28 +93,32 @@ Enjoy the (beta) release!
 
 ## Improved scene editor experience
 
-Scenes are a great way to set the mood in your home. They allow you to capture
-the state of your devices at a specific moment and restore them later with,
-for example, a button on your dashboard, using an automation, or even
-using a voice command.
+{% term Scenes %} are a great way to set the mood in your home. They allow you
+to capture the state of your devices at a specific moment and restore them
+later, using a button on your dashboard, an automation, or even a voice command.
 
-One of the common frustrations with editing scenes in Home Assistant, is that
-would always immediately activate and apply the scene if you opened the scene
-editor. Not a great experience if you are doing some midnight tinkering and
-accidentally activate a scene that turns on all the lights in the house waking
-up everyone. 😅
+One of the common frustrations with editing scenes in Home Assistant is that it
+would immediately activate and apply the scene if you opened the scene editor.
+Not the best experience if you are doing some midnight tinkering and
+accidentally activate a scene that turns on all the lights in the house,
+waking up everyone. 😅
 
-[@karwosts] to the rescue! 🦸‍♂️ As of this release, the scene editor has two
-modes. A **review mode** and an **edit mode**.
+[@karwosts] & [@marcinbauer85] to the rescue! 🦸‍♂️ As of this release, the scene
+editor has two modes. A **review mode** and an **edit mode**.
 
-![Scene editor review mode](/images/blog/2024-12/scene-review.png)
+<img class="no-shadow" alt="Dialog showing the Assist pipeline configuration, showing the new option to prefer handling commands locally." src="/images/blog/2024-12/scene-review-mode.png"/>
 
 The review mode is the default mode, and it will show you the scene as it is
 currently set up, but it will not apply it. You can then switch to the edit
 mode the scene is activated allow you to adjust the actual scenery and snapshot
 it again once you are happy with the changes.
 
+Additionally, if you prefer {% term YAML %}, you can edit scenes directly from
+the scene editor by selecting **“Edit in YAML”** from the three-dotted 
+{% icon "mdi:dots-vertical" %} overflow menu in the top right corner.
+
 [@karwosts]: https://github.com/karwosts
+[@marcinbauer85]: https://github.com/marcinbauer85
 
 ## Voice
 
