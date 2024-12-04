@@ -15,63 +15,41 @@ og_image: /images/blog/2024-12/social.png
 
 <lite-youtube videoid="9Y9YY_YHNBY" videotitle="Home Assistant 2024.12 Release Party"></lite-youtube>
 
-{% note %}
-
-**Welcome to the beta release notes for Home Assistant 2024.12** 🎉
-
-<br />
-
-Please note that these release notes are a work in progress. 👷‍♀️ We will be
-completing them over the next couple of days. Not all features might be final
-yet, and some features _**may not** make it into the final release_.
-
-<br />
-
-**Want to help test the beta?** Awesome! ❤️ We have documented how you
-[can join our beta channel and install the beta here](/common-tasks/os/#running-a-beta-version).
-
-<br />
-
-While running the beta, we highly recommend joining our _#beta_ channel on
-the [Home Assistant Discord chat](/join-chat)! 💬 Most developers and beta
-testers are in this channel during the beta period to share experiences, ideas,
-and iterate over new features, fine-tuning them before the final release.
-It's a really fun place to hang out. 😎
-
-<br />
-
-**Reporting issues**: As this is a beta test, you might encounter unexpected
-behavior or issues. 🐞 We use the GitHub issue tracker to track beta issues.
-You can find our issue trackers and the reported issues during beta here:
-
-<br />
-
-- [Report(ed) beta **dashboards/UI/frontend** issues](https://github.com/home-assistant/frontend/milestone/126)
-- [Report(ed) beta **integrations/automations/backend/core** issues](https://github.com/home-assistant/core/milestone/706)
-- [Report(ed) beta **documentation** issues](https://github.com/home-assistant/home-assistant.io/milestone/133)
-
-🙏 When reporting issues, **make sure to mention the exact beta version you are
-running** in the issue description. This will help us identify and track the
-issue correctly. Read more about [reporting issues here](/help/reporting_issues/).
-
-<br />
-
-Issues introduced in the beta are processed with priority. 🔝
-
-{% endnote %}
-
-{% tip %}
-
-Don't forget to [join our release party live stream on YouTube](https://www.youtube.com/watch?v=9Y9YY_YHNBY)
-4 December 2024, at 20:00 GMT / 12:00 PT / 21:00 CET!
-
-{% endtip %}
-
 Home Assistant 2024.12! 🎄
 
-Enjoy the (beta) release!
+Holidays are coming, and it is time for the last release of the year! 🎉
+
+**2024** has been a crazy year for Home Assistant. Not just in terms of features
+like [drag-and-drop dashboards], [organization capabilities] like labels, and
+the countless improvements to our voice efforts. But evenmore in the growth of
+our lovely community as we rised up to become
+[the #1 open source project on GitHub]! ❤️
+
+However, the year ain't over yet! This month, we want to learn about all your
+_"What the heck?!"_ moments with Home Assistant. Tell us about any little
+annoyances, bugs, ideas, or suggestions. You can read all about it in
+[the WTH announcement blog], or join the conversation [on our WTH forums]!
+
+Honestly, **the biggest announcement of the year has yet to come though**... 🤫
+I'm pretty sure it is voice hardware related 😉 So make sure you aren't
+missing [the live stream on 19 December]! 📺 You will not be disappointed! 🎁
+
+Before you check out everything in this release, I just want to close this
+year with a big thank you to every single person in our community, which
+includes you!
+
+**Thank you for using Home Assistant!** ❤️
+
+Happy holidays! And for the last time in 2024: Enjoy the release!
 
 ../Frenck
+
+[drag-and-drop dashboards]: /blog/2024/11/06/release-202411/#sections-dashboard-no-longer-experimental
+[on our WTH forums]: https://community.home-assistant.io/c/month-of-what-the-heck/61
+[organization capabilities]: /blog/2024/04/03/release-20244/#three-new-ways-to-organize
+[the #1 open source project on GitHub]: /blog/2024/11/18/event-wrapup-github-universe-24/#we-are-number-1
+[the live stream on 19 December]: https://youtube.com/live/ZgoaoTpIhm8
+[the WTH announcement blog]: /blog/2024/12/01/announcing-month-of-what-the-heck/
 
 <!--more-->
 
