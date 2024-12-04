@@ -364,23 +364,27 @@ Processed up to _#131540.
 There are many more improvements in this release; here are some of the other
 noteworthy changes this release:
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-  Thanks [@frenck]!
+- [@jpbebe] added a download snapshot button to the camera entity information
+  dialog. Super nice! Thanks!
+- The UI now displays durations using a timer format (like 03:26:00) in natural
+  language (3h 26min). Thanks [@piitaya]!
+- Support for new units of measurement has been added:
+  - Units for area sizes (and conversions between metric and US).
+    Thanks [@mikey0000]!
+  - [@jschlyter] has added support for MW, GW, TW, GWh, and TWh. Nice!
+  - µV has been added as a unit of electric potential. Thanks [@tr4nt0r]!
+  - Lastly, mL/s has been added as a unit of volume flow rate. Thanks [@zweckj]!
+- If you are editing an automation using YAML via our UI and you make a mistake…
+  you will now actually see the parsing error message in the UI. This is really
+  helpful! Thanks , [@karwosts]!
 
-[@frenck]: https://github.com/frenck
-
-- Add horizontal swing to climate (#22043) @gjohansson-ST
-- Integration Quality Scale indicator (#23015) @wendevlin
-- Use DurationFormat for calendar trigger (#23020) @silamon
-- Use explicit duration format for state formatting (#23017) @piitaya
-- Support time entities in automation time conditions/triggers selectors (#21069) @markbergsma
-- Add tone,volume & duration selector to more-info dialog for sirens (#22786) @MindFreeze
-- Add download snapshot button to camera more info dialog (#22704) @jpbede
-- Show YAML parsing errors in automation editor (#22753) @karwosts
-- Area units and conversion between metric and US ([@mikey0000] - [#123563])
-- Add µV as UnitOfElectricPotential ([@tr4nt0r] - [#130838]) ([sensor docs])
-- Add support for MW/GW/TW and GWh/TWh ([@jschlyter] - [#130089])
-- Allow mL/s as UnitOfVolumeFlowRate ([@zweckj] - [#130771]) ([sensor docs])
+[@jpbebe]: https://github.com/jpbebe
+[@jschlyter]: https://githubc.com/jschlyter
+[@karwosts]: https://github.com/karwosts
+[@mikey0000]: htttps://github.com/mikey0000
+[@piitaya]: https://github.com/piitaya
+[@tr4nt0r]: https://github.com/tr4nt0r
+[@zweckj]: https://github.com/zweckj
 
 ## Translations for units of measurement
 
