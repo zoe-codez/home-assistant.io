@@ -23,7 +23,7 @@ Holidays are coming, and it is time for the last release of the year! 🎉
 like [drag-and-drop dashboards], [organization capabilities] like labels, and
 the countless improvements to our voice efforts. But also the founding of
 [the Open Home Foundation], and even more in the growth of our lovely community
-as we rose up to become [the #1 open source project on GitHub]! ❤️
+as we risen up to become [the #1 open source project on GitHub]! ❤️
 
 However, the year ain't over yet! This month, we want to learn about all your
 _"What the heck?!"_ moments with Home Assistant. Tell us about any little
