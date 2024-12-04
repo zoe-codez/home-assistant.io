@@ -404,6 +404,20 @@ it is inevitable.
 We always make sure to document these changes to make the transition as easy as
 possible for you. This release has the following backward-incompatible changes:
 
+{% details "Brother Printer" %}
+
+The unit of measurement for pages changed from `p` to `pages`.
+
+This could potentially break use cases if it was used in templates where a state
+with a unit is used, such as `states('sensor.pages', with_unit=True)`.
+
+([@bieniu] - [#131275]) ([documentation](/integrations/brother))
+
+[@bieniu]: https://github.com/bieniu
+[#131275]: https://github.com/home-assistant/core/pull/131275
+
+{% enddetails %}
+
 {% details "Ecovacs" %}
 
 Ecovacs devices not recognized by the library will no longer use the fallback
@@ -419,7 +433,7 @@ and a warning log will created.
 
 {% details "Glances" %}
 
-Glances v2 api has been deprecated and has now been removed. Upgrade to v3 or
+The previously deprecated Glances v2 API has been removed. Upgrade to v3 or
 higher to continue using the integration.
 
 ([@gjohansson-ST] - [#131427]) ([documentation](/integrations/glances))
@@ -431,15 +445,15 @@ higher to continue using the integration.
 
 {% details "History Stats" %}
 
-After this change, `history_stats` in `time` or `ratio` mode will only count
-time that is definitively known based on recorder data.
+After this change, `history_stats` in `time` or `ratio` mode will only count
+definitively known time-based on recorded data.
 
 Prior to this change, if the start of the time window was earlier than the
 oldest datapoint in the recorder, `history_stats` would count time using the
 assumption that an entity was in the first state it found since the beginning
 of time. This could lead to wild overcalculations when a switch was turned on
 after a long period of inactivity, and `history_stats` would assume it has
-_always_ been on, and calculate a huge value based on that.
+_always_ been on and calculate a huge value based on that.
 
 ([@karwosts] - [#126271]) ([documentation](/integrations/history_stats))
 
@@ -464,15 +478,27 @@ it.
 
 {% details "QNAP" %}
 
-The following QNAP sensors no longer will have extra state attributes:
+The following QNAP sensors will no longer have extra state attributes:
 
-- The `memory_free`, `memory_size`, `memory_used`, and `memory_percent_used` sensors.
-- The `network_link_status`, `network_max_speed`, `network_err`, `network_tx` and `network_rx` sensors.
-- The `status`, `system_temp` and `uptime` sensors.
-- The `volume_size_free`, `volume_size_total`, `volume_size_used` and `volume_percentage_used` sensors.
+- `memory_free`
+- `memory_percent_used`
+- `memory_size`
+- `memory_used`
+- `network_err`
+- `network_link_status`
+- `network_max_speed`
+- `network_rx`
+- `network_tx`
+- `status`
+- `system_temp`
+- `uptime`
+- `volume_percentage_used`
+- `volume_size_free`
+- `volume_size_total`
+- `volume_size_used`
 
-These extra state attributes were deprcated in Home Assistant 2024.6 and now
-have been removed. If you are using this in your automation or script, use
+These extra state attributes were deprecated in Home Assistant 2024.6 and have
+now been removed. If you are using this in your automation or script, use
 the separate available sensors instead.
 
 ([@jbouwh] - [#130310]) ([documentation](/integrations/qnap))
@@ -482,12 +508,29 @@ the separate available sensors instead.
 
 {% enddetails %}
 
+{% details "Spotify" %}
+
+The Spotify audio feature sensors have been removed since Spotify
+removed access for them, starting 27 November.
+
+Additionally, featured and category playlists have been removed from
+the Spotify media browser since Spotify deprecated the API,
+starting on 27 November.
+
+([@joostlek] - [#131754] [#131758]) ([documentation](/integrations/spotify))
+
+[@joostlek]: https://github.com/joostlek
+[#131754]: https://github.com/home-assistant/core/pull/131754
+[#131758]: https://github.com/home-assistant/core/pull/131758
+
+{% enddetails %}
+
 {% details "Statistics" %}
 
 Previously the attributes was only provided when they had a non `None` value.
 This has now changed so the attributes are always provided even with `None`
-values. If automations or scripts was depending on these attributes was
-present or not needs to be modified accordingly.
+values. You might need to modify your automations or scripts depending on
+whether these attributes are present or not.
 
 ([@gjohansson-ST] - [#129353]) ([documentation](/integrations/statistics))
 
