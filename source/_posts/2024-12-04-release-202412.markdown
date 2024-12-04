@@ -158,7 +158,7 @@ release, you can set up a voice assistant that targets our fast,
 community-driven conversation agent first and only falls back to an LLM-based
 agent if no matches are found.
 
-<img class="no-shadow" alt="Dialog showing the Assist pipeline configuration, showing the new option to prefer handling commands locally." src="/images/blog/2024-12/llm-fallback.png"/>
+<img class="no-shadow" alt="Dialog showing the Assist pipeline configuration, showing the new option to prefer handling commands locally." src="/images/blog/2024-12/llm-fallback-configuration.png"/>
 
 This allows you to mix both worlds' pros with almost none of the cons.
 
