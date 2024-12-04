@@ -370,13 +370,18 @@ noteworthy changes this release:
 
 ## Translations for units of measurement
 
-Over the last few years, we have been working hard in making every little
+Over the last few years, we have been working hard to make every little
 bit of Home Assistant accessible for everyone by providing translations
 for every part of the system. 🌐
 
-However, we have some edge cases still, where we are not able to provide
+However, we still have some edge cases, where we are not able to provide
 translations for everything. One of those edge cases is the units of
 measurement. 📏
+
+Although units do not need translation (like °C or kWh) in most cases, many
+sensors in a home might use specific and non-standardized units. For example,
+a sensor that measures the number of “people” in a home or one that tells you
+how many “movies” are in your collection.
 
 Although for most cases, units do not need translation (like `°C` or `kWh`),
 there are many sensors in ones home that might use units that are specific
@@ -384,13 +389,22 @@ and not standarized. For example, a sensor that measures the amount of
 "people" in a home, or one that tells you how many "movies" are in your
 collection.
 
-So, if you now have a sensor that has a custom unit of measurement, like
-the amount of "movies" in your collection, integrations can now provide
-translations for those units. 🎉
+So, suppose you now have a sensor with a custom measurement unit, like the
+amount of “movies” in your collection. In that case, integrations can now
+provide translations for those units. 🎉
 
-- Add unit translations for NextDNS integration ([@bieniu] - [#131281]) ([nextdns docs])
-- Add unit of measurement to translations for Mastodon ([@andrew-codechimp] - [#131343]) ([mastodon docs])
-- Add unit of measurement to translations for Mealie ([@andrew-codechimp] - [#131345]) ([mealie docs])
+Several integrations have already added translations for their units, including
+[Jellyfin], [Lyrion Music Server], [Transmission], [Pi-hole], [QBitTorrent],
+[NextDNS], [Mastodon], and [Mealie]!
+
+[Jellyfin]: /integrations/jellyfin
+[Lyrion Music Server]: /integrations/squeezebox
+[Mastodon]: /integrations/mastodon
+[Mealie]: /integrations/mealie
+[NextDNS]: /integrations/nextdns
+[Pi-hole]: /integrations/pi_hole
+[QBitTorrent]: /integrations/qbittorrent
+[Transmission]: /integrations/transmission
 
 ## We've upgraded to Python 3.13
 
