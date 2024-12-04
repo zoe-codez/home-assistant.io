@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2024.12: Scene you in 2025! 🎄"
-description: "Holidays are coming, time for the last release of the year! View your scenes without immediately activating them. Let your voice assistant fall back to a LLM-based agent, and enjoy a faster voice experience. A revised Integration Quality Scale, new integrations, plus, we've upgraded to Python 3.13! See you in 2025!"
+description: "Holidays are coming, time for the last release of the year! View your scenes without immediately activating them. Let your voice assistant fall back to an LLM-based agent, and enjoy a faster voice experience. A revised Integration Quality Scale, new integrations, plus, we've upgraded to Python 3.13! See you in 2025!"
 date: 2024-12-04 00:00:00
 date_formatted: "December 4, 2024"
 author: Franck Nijhof
@@ -55,7 +55,7 @@ Happy holidays! And for the last time in 2024: Enjoy the release!
 
 - [Improved scene editor experience](#improved-scene-editor-experience)
 - [Voice](#voice)
-  - [Let your voice assistant fall back to a LLM-based agent](#let-your-voice-assistant-fall-back-to-a-llm-based-agent)
+  - [Let your voice assistant fall back to an LLM-based agent](#let-your-voice-assistant-fall-back-to-a-llm-based-agent)
   - [Language leaders are accelerating the pace](#language-leaders-are-accelerating-the-pace)
   - [A faster voice experience](#a-faster-voice-experience)
 - [Revised Integration Quality Scale](#revised-integration-quality-scale)
@@ -122,7 +122,7 @@ But before we get there, let's dive into the features that ship in this release!
 [join the live stream]: https://www.youtube.com/watch?v=ZgoaoTpIhm8
 [we started our journey]: /blog/2022/12/20/year-of-voice/
 
-### Let your voice assistant fall back to a LLM-based agent
+### Let your voice assistant fall back to an LLM-based agent
 
 [Exactly 6 months ago], we bridged the gap between our default conversation agent
 and the wonderful (and scary) world of [LLMs]. We allowed you to experiment and
@@ -148,7 +148,7 @@ Specific known commands will be processed locally and extremely fast, and the
 power of an LLM will only be used for more complex queries that Home Assistant
 does not natively understand.
 
-<lite-youtube videoid="vThoxRIxHyI" videotitle="Let your voice assistant fall back to a LLM-based agent" posterquality="maxresdefault"></lite-youtube>
+<lite-youtube videoid="vThoxRIxHyI" videotitle="Let your voice assistant fall back to an LLM-based agent" posterquality="maxresdefault"></lite-youtube>
 
 [Exactly 6 months ago]: /blog/2024/06/05/release-20246/
 [LLMs]: https://en.wikipedia.org/wiki/Language_model
