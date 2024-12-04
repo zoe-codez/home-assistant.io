@@ -308,56 +308,43 @@ It is not just new {% term integrations %} that have been added; existing
 integrations are also being constantly improved. Here are some of the noteworthy
 changes to existing integrations:
 
-- The [Lorem ipsum] integration now supports slipsum! Thanks [@frenck]!
+- The [UniFi Protect integration] now has support for fingerprint and NFC
+  events. You can even automate on the specific fingerprint or NFC scanned!
+  Awesome, [@RaHehl]!
+- The [TP-Link integration] now supports the H200 hubs and adds more
+  energy-monitoring sensors for Tapo devices. It also exposes new entities like
+  a motion sensor switch, a child lock switch for thermostats, and the last
+  water leak alert timestamp.
+  Thanks to [@sdb9696], [@rytilahti], and [@ryenitcher]!
+- [@starKillerOG] added selector entities for bitrate, framerate, and vehicle
+  tone to the [Reolink integration]. Additionally, a tilt position sensor for
+  PTZ cameras has been added. Thanks!
+- [@fwestenberg] updated the [Stookwijzer integration], with some new sensors,
+  right on time for the winter season. Nice!
+- The [Habitica integration] now provides action for quest handling, scoring
+  habits, and rewards. It also adds calendars for your to-do and daily reminders.
+  Nice, [@tr4nt0r]!
+- The [eQ-3 Bluetooth Smart integration] now provide several helpful switches
+  and sensors (like away mode, boost, battery). Thanks, [@EuleMitKeule]!
+- [@YogevBokobza] added Switcher Lights support to the [Switcher integration].
+  Thanks!
 
-[@frenck]: https://github.com/frenck
-[Lorem ipsum]: /integrations/lorem_ipsum
-
-- Add boost switch to Smarty ([@marcodutto] - [#129466]) ([smarty docs]) (new-platform)
-- Add smarty reset filters timer button ([@marcodutto] - [#129637]) ([smarty docs]) (new-platform)
-
-- Add Reolink PTZ tilt position sensor ([@starkillerOG] - [#129837]) ([reolink docs])
-- Add Reolink chime vehicle tone ([@starkillerOG] - [#129835]) ([reolink docs])
-- Add Reolink bitrate and framerate select entities ([@starkillerOG] - [#131571]) ([reolink docs])
-
-
-- Add binary sensor platform to Habitica integration ([@tr4nt0r] - [#129613]) ([habitica docs]) (new-platform)
-- Add actions for quest handling to Habitica ([@tr4nt0r] - [#129650]) ([habitica docs])
-- Add actions for scoring habits and rewards in Habitica ([@tr4nt0r] - [#129605]) ([habitica docs])
-- Add sensors for attribute points (str, int, per, con) to Habitica ([@tr4nt0r] - [#130186]) ([habitica docs])
-- Add calendars for to-do and daily reminders to Habitica integration ([@tr4nt0r] - [#130789]) ([habitica docs])
-
-- Add binary sensor platform to eq3btsmart ([@EuleMitKeule] - [#130352]) ([eq3btsmart docs]) (new-platform)
-- Add switch platform to eq3btsmart ([@EuleMitKeule] - [#130363]) ([eq3btsmart docs]) (new-platform)
-
-- Add signing support to Tesla Fleet ([@Bre77] - [#128407]) ([tesla_fleet docs])
-
-- Add water price sensor to suez water ([@jb101010-2] - [#130141]) ([suez_water docs])
-
-- Add motion sensor setting to tplink ([@rytilahti] - [#129393]) ([tplink docs])
-- Allow reconnecting wireless omada clients ([@reey] - [#128491]) ([tplink_omada docs])
-
-- Add Switcher Lights support ([@YogevBokobza] - [#129494]) ([switcher_kis docs])
-
-- Bang & Olufsen add beolink grouping ([@mj23000] - [#113438]) ([bang_olufsen docs]) (dependency)
-- Add binary sensor platform to the Lektrico integration ([@Lektrico] - [#129872]) ([lektrico docs]) (new-platform)
-- Add support for binary sensor states in Google Assistant ([@joostlek] - [#127652]) ([google_assistant docs])
-- Add alarm count sensor for Kostal Inverters ([@N3rdix] - [#130324]) ([kostal_plenticore docs])
-- Add starline run sensor ([@Anonym-tsk] - [#130444]) ([starline docs])
-- Switcher add current current temperature sensor ([@YogevBokobza] - [#130653]) ([switcher_kis docs])
-- Add new sensors to Mill ([@Danielhiversen] - [#130896]) ([mill docs])
-- Add number platform to sabnzbd and deprecate custom action ([@jpbede] - [#131029]) ([sabnzbd docs]) (new-platform) (deprecation)
-- Add StarLine flex logic and panic buttons ([@Anonym-tsk] - [#130819]) ([starline docs])
-- Add waterheater platform bsblan ([@liudger] - [#129053]) ([bsblan docs]) (new-platform)
-- Add new sensors to Stookwijzer ([@frenck] - [#131587]) ([stookwijzer docs])
-- Add fingerprint and nfc event support to unifiprotect ([@RaHehl] - [#130840]) ([unifiprotect docs])
-
-
-{% details "Potential changes to process" icon="mdi:scale-balance" %}
-
-Processed up to _#131540.
-
-{% enddetails %}
+[@sdb9696]: https://github.com/sdb9696
+[@EuleMitKeule]: https://github.com/EuleMitKeule
+[@fwestenberg]: https://github.com/fwestenberg
+[@RaHehl]: https://github.com/RaHehl
+[@ryenitcher]: https://github.com/ryenitcher
+[@rytilahti]: https://github.com/rytilahti
+[@starKillerOG]: https://github.com/starKillerOG
+[@tr4nt0r]: https://github.com/tr4nt0r
+[@YogevBokobza]: https://github.com/YogevBokobza
+[eQ-3 Bluetooth Smart integration]: /integrations/eq3btsmart
+[Habitica integration]: /integrations/habitica
+[Reolink integration]: /integrations/reolink
+[Stookwijzer integration]: /integrations/stookwijzer
+[Switcher integration]: /integrations/switcher_kis
+[TP-Link integration]: /integrations/tplink
+[UniFi Protect integration]: /integrations/unifiprotect
 
 ## Other noteworthy changes
 
