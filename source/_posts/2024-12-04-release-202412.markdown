@@ -142,19 +142,20 @@ But before we get there, let's dive into the features that ship in this release!
 
 ### Let your voice assistant fall back to a LLM-based agent
 
-[Exactly 6 months ago] we bridged the gap between our intent world and the
-wonderful (and scary) world of LLMs. We allowed you to let an LLM agent control
-your home instead of relying on our built-in intents.
+[Exactly 6 months ago] we bridged the gap between our default conversation agent
+and the wonderful (and scary) world of [LLMs]. We allowed you to let an
+LLM-based conversation agent control your home instead of relying on our
+built-in sentences.
 
 This choice was an interesting first step. LLMs are generally much smarter and
-more knowledgeable about the world than our built-in intents. However, they are
+more knowledgeable about the world than our default agent. However, they are
 often slow and/or expensive. And let’s face it: Even if the demos are cool,
 90% of the commands we say in our homes are simple:
-_“Turn this on”_ or _“Turn that off”_.
+_“Turn this on”_ or _“Turn that off”_.
 
 Today, we're finally allowing users to **mix** these worlds. Starting from this
-release, you can set up a voice assistant in a way that will target our fast,
-community-driven, built-in intents first, and only fallback to an LLM-based
+release, you can set up a voice assistant that targets our fast,
+community-driven conversation agent first and only falls back to an LLM-based
 agent if no matches are found.
 
 <img class="no-shadow" alt="Dialog showing the Assist pipeline configuration, showing the new option to prefer handling commands locally." src="/images/blog/2024-12/llm-fallback.png"/>
@@ -167,45 +168,43 @@ does not natively understand.
 
 <lite-youtube videoid="vThoxRIxHyI" videotitle="Let your voice assistant fall back to a LLM-based agent" posterquality="maxresdefault"></lite-youtube>
 
-[Exactly 6 months ago]: https://www.home-assistant.io/blog/2024/06/05/release-20246/
+[Exactly 6 months ago]: /blog/2024/06/05/release-20246/
+[LLMs]: https://en.wikipedia.org/wiki/Language_model
 
 ### Language leaders are accelerating the pace
 
-It is not a secret: our voice hardware will come soon. Language leaders already
-got their hands on the device, and are working extremely hard to polish support
-for their language.
+It is not a secret: our voice hardware will be revealed on 19 December 2024.
+Language leaders have already gottten their hands on the device, and are working
+extremely hard to polish support for their language.
 
-The amount of contributions on our [intents repository] (where we store the
-supported sentences) skyrocketed during the last month. It is something we all
-truly appreciate. More and more languages are becoming usable, or even complete!
-You can follow the progress [here](https://home-assistant.github.io/intents/).
+The number of contributions to our [intents repository] (where we store the
+supported sentences) skyrocketed during the last month, which we all truly
+appreciate. More and more languages are becoming usable or even complete!
+You can follow the progress [here](https://home-assistant.github.io/intents/).
 
 We won't list them all here, but just be aware that it is very likely that
 someone is hard at work making sure your native language gets some love so
-that you can speak with your home.
+you can speak with your home.
 
 [intents repository]: https://github.com/home-assistant/intents?tab=readme-ov-file
 
 ### A faster voice experience
 
-[HASSIL], our intent parser, was built from the ground up to match a sentence to
-its underlying intention extremely fast and on cheap hardware.
+Our default conversation agent was built from the ground up to match a sentence
+to its underlying intention extremely fast and on cheap hardware.
 
-Release after release, we added more use-cases and more sentences to
-Home Assistant, and our sentence-matching logic became slower and slower. In
-some of the languages, a non-matching sentence could take more than 15 seconds
-to be processed!
+Release after release, we added more use cases and sentences to Home Assistant,
+and our sentence-matching logic became slower and slower. In some languages,
+a non-matching sentence could take more than 15 seconds to process!
 
-This release adds a lot of love to HASSIL; we completely reengineered the way
-we match sentences. On top of that, language leaders spent some time reducing
-the complexity of their sentences. Some languages saw a reduction of 99% in the
-number of possible combinations!
+This release adds a lot of love to this matching logic; we completely
+reengineered the way we match sentences. On top of that, language leaders spent
+some time reducing the complexity of their sentences. Some languages saw a 99%
+reduction in the number of possible combinations!
 
 The results speak for themselves:
 
-<lite-youtube videoid="U_CMXL2Z5NE" videotitle="A faster voice experience with HASSIL" posterquality="maxresdefault"></lite-youtube>
-
-[HASSIL]: https://github.com/home-assistant/hassil
+<lite-youtube videoid="U_CMXL2Z5NE" videotitle="A faster voice experience with Our default conversation agent" posterquality="maxresdefault"></lite-youtube>
 
 ## Revised Integration Quality Scale
 
