@@ -21,9 +21,9 @@ Holidays are coming, and it is time for the last release of the year! 🎉
 
 **2024** has been a crazy year for Home Assistant. Not just in terms of features
 like [drag-and-drop dashboards], [organization capabilities] like labels, and
-the countless improvements to our voice efforts. But even more in the growth of
-our lovely community as we rised up to become
-[the #1 open source project on GitHub]! ❤️
+the countless improvements to our voice efforts. But also the founding of
+[the Open Home Foundation], and even more in the growth of our lovely community
+as we rose up to become [the #1 open source project on GitHub]! ❤️
 
 However, the year ain't over yet! This month, we want to learn about all your
 _"What the heck?!"_ moments with Home Assistant. Tell us about any little
@@ -49,6 +49,7 @@ Happy holidays! And for the last time in 2024: Enjoy the release!
 [organization capabilities]: /blog/2024/04/03/release-20244/#three-new-ways-to-organize
 [the #1 open source project on GitHub]: /blog/2024/11/18/event-wrapup-github-universe-24/#we-are-number-1
 [the live stream on 19 December]: https://youtube.com/live/ZgoaoTpIhm8
+[the Open Home Foundation]: https://www.openhomefoundation.org/
 [the WTH announcement blog]: /blog/2024/12/01/announcing-month-of-what-the-heck/
 
 <!--more-->
@@ -332,7 +333,7 @@ changes to existing integrations:
 There are many more improvements in this release; here are some of the other
 noteworthy changes this release:
 
-- [@jpbebe] added a download snapshot button to the camera entity information
+- [@jpbede] added a download snapshot button to the camera entity information
   dialog. Super nice! Thanks!
 - The UI now displays durations using a timer format (like 03:26:00) in natural
   language (3h 26min). Thanks [@piitaya]!
@@ -346,7 +347,7 @@ noteworthy changes this release:
   you will now actually see the parsing error message in the UI. This is really
   helpful! Thanks, [@karwosts]!
 
-[@jpbebe]: https://github.com/jpbebe
+[@jpbede]: https://github.com/jpbede
 [@jschlyter]: https://githubc.com/jschlyter
 [@karwosts]: https://github.com/karwosts
 [@mikey0000]: htttps://github.com/mikey0000
