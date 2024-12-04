@@ -208,7 +208,7 @@ reduction in the number of possible combinations!
 
 The results speak for themselves:
 
-<lite-youtube videoid="U_CMXL2Z5NE" videotitle="A faster voice experience with Our default conversation agent" posterquality="maxresdefault"></lite-youtube>
+<lite-youtube videoid="RH69Dh6coMM" videotitle="A faster voice experience with Our default conversation agent" posterquality="maxresdefault"></lite-youtube>
 
 ## Revised Integration Quality Scale
 
