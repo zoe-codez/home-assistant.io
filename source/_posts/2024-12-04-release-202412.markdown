@@ -363,6 +363,8 @@ translations for those units. 🎉
 
 ## We've upgraded to Python 3.13
 
+<img class="no-shadow" alt="The Python logo; Home Assistant now runs on top of Python latest 3.13 update" src="/images/blog/2024-12/python.png"/>
+
 This release comes packaged with Python 3.13!  🐍
 
 Wondering what that means? Python is the programming language that powers Home
