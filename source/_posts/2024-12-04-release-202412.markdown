@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "2024.12: Beta release notes"
-description: "Beta release notes for Home Assistant 2024.12"
-date: 2024-11-26 00:00:00
+title: "2024.12: Scene you in 2025! 🎄"
+description: "Holidays are coming, time for the last release of the year! View your scenes without immediately activating them. Let your voice assistant fall back to a LLM-based agent, and enjoy a faster voice experience. A revised Integration Quality Scale, new integrations, plus, we've upgraded to Python 3.13! See you in 2025!"
+date: 2024-12-04 00:00:00
 date_formatted: "December 4, 2024"
 author: Franck Nijhof
 author_twitter: frenck
