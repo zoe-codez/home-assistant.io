@@ -21,7 +21,7 @@ Holidays are coming, and it is time for the last release of the year! 🎉
 
 **2024** has been a crazy year for Home Assistant. Not just in terms of features
 like [drag-and-drop dashboards], [organization capabilities] like labels, and
-the countless improvements to our voice efforts. But evenmore in the growth of
+the countless improvements to our voice efforts. But even more in the growth of
 our lovely community as we rised up to become
 [the #1 open source project on GitHub]! ❤️
 
@@ -31,7 +31,7 @@ annoyances, bugs, ideas, or suggestions. You can read all about it in
 [the WTH announcement blog], or join the conversation [on our WTH forums]!
 
 Honestly, **the biggest announcement of the year has yet to come though**... 🤫
-I'm pretty sure it is voice hardware related 😉 So make sure you aren't
+I'm pretty sure it is voice hardware related. 😉 So make sure you aren't
 missing [the live stream on 19 December]! 📺 You will not be disappointed! 🎁
 
 Before you check out everything in this release, I just want to close this
@@ -164,7 +164,7 @@ supported sentences) skyrocketed during the last month, which we all truly
 appreciate. More and more languages are becoming usable or even complete!
 You can follow the progress [here](https://home-assistant.github.io/intents/).
 
-We won’t list them all here, but rest assured, someone is likely working hard to
+We won’t list them all, but rest assured, someone is likely working hard to
 ensure your native language works seamlessly, so you can use it comfortably
 at home.
 
@@ -238,7 +238,7 @@ You can read all about these tiers, what they have been designed for, and a
 summary of their characteristics on our dedicated
 [Integration Quality Scale page].
 
-We sincerely hope this new scale, will not just help our users, but also our
+We sincerely hope this new scale will not just help our users, but also our
 community developers to understand what is expected by providing a clear path
 to improving their integrations. To help with that, we have now
 [extensively documented every rule and requirement for each tier in our
@@ -251,7 +251,7 @@ developer documentation].
 ## Integrations
 
 Thanks to our community for keeping pace with the new {% term integrations %}
-and improvements to existing ones! You’re all awesome 🥰
+and improvements to existing ones! You’re all awesome. 🥰
 
 ### New integrations
 
@@ -305,7 +305,7 @@ changes to existing integrations:
 - The [Habitica integration] now provides action for quest handling, scoring
   habits, and rewards. It also adds calendars for your to-do and daily reminders.
   Nice, [@tr4nt0r]!
-- The [eQ-3 Bluetooth Smart integration] now provide several helpful switches
+- The [eQ-3 Bluetooth Smart integration] now provides several helpful switches
   and sensors (like away mode, boost, battery). Thanks, [@EuleMitKeule]!
 - [@YogevBokobza] added Switcher Lights support to the [Switcher integration].
   Thanks!
@@ -344,7 +344,7 @@ noteworthy changes this release:
   - Lastly, mL/s has been added as a unit of volume flow rate. Thanks [@zweckj]!
 - If you are editing an automation using YAML via our UI and you make a mistake…
   you will now actually see the parsing error message in the UI. This is really
-  helpful! Thanks , [@karwosts]!
+  helpful! Thanks, [@karwosts]!
 
 [@jpbebe]: https://github.com/jpbebe
 [@jschlyter]: https://githubc.com/jschlyter
