@@ -23,7 +23,7 @@ Holidays are coming, and it is time for the last release of the year! 🎉
 like [drag-and-drop dashboards], [organization capabilities] like labels, and
 the countless improvements to our voice efforts. But also the founding of
 [the Open Home Foundation], and even more in the growth of our lovely community
-as we risen up to become [the #1 open source project on GitHub]! ❤️
+as we've risen up to become [the #1 open source project on GitHub]! ❤️
 
 However, the year ain't over yet! This month, we want to learn about all your
 _"What the heck?!"_ moments with Home Assistant. Tell us about any little
@@ -56,7 +56,7 @@ Happy holidays! And for the last time in 2024: Enjoy the release!
 
 - [Improved scene editor experience](#improved-scene-editor-experience)
 - [Voice](#voice)
-  - [Let your voice assistant fall back to an LLM-based agent](#let-your-voice-assistant-fall-back-to-a-llm-based-agent)
+  - [Let your voice assistant fall back to an LLM-based agent](#let-your-voice-assistant-fall-back-to-an-llm-based-agent)
   - [Language leaders are accelerating the pace](#language-leaders-are-accelerating-the-pace)
   - [A faster voice experience](#a-faster-voice-experience)
 - [Revised Integration Quality Scale](#revised-integration-quality-scale)
@@ -506,7 +506,7 @@ it.
 
 {% details "QNAP" %}
 
-The following QNAP sensors will no longer have extra state attributes:
+The QNAP sensors will no longer have the following extra state attributes:
 
 - `memory_free`
 - `memory_percent_used`
