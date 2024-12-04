@@ -209,49 +209,63 @@ The results speak for themselves:
 
 ## Revised Integration Quality Scale
 
-The Integration Quality Scale is a way we try to classify the "quality" of an
-integration. It is a way to give users an idea of what to expect from an
-integration. You might have noticed our Integration Quality Scale indicator
-listed on each integration documentation page.
+The Integration Quality Scale (IQS) is a way we classify the "quality" of an
+integration. It gives users an idea of what to expect from an integration.
+You might have noticed our IQS indicator listed on
+[each integration documentation page].
 
-The scale was originally introduced in 2018?, and back then, was more aimed
-at the technical side and code of an integration. Over the years, it didn't
-really evolve with the rest of Home Assistant and the community.
+The scale was initially introduced in 2018 and aimed more at the technical
+side and code of an integration back then. Over the years, it didn't
+really evolve with the rest of Home Assistant and the general expectations of
+our community. It was time for a change!
 
-The last few months, we have worked with the community to revise and improve
-the Integration Quality Scale. Involving not just our community developers,
-but also documentation writers, user experience designers, and everyone else
-in the community who wanted to join in.
+Over the last few months, we have worked with the community to revise and
+improve the scale. Involving not just our community developers, but also
+documentation writers, user experience designers, and anyone interested
+in the community.
 
-As a result, the new Integration Quality Scale is not just focussed on the
-code, but even more on the overall user-experience it brings. It is now a
-more holistic view on the integration, and we hope it will help everyone
-to make better decisions on what to use in their homes.
+As a result, the new Integration Quality Scale is not just focused on the code
+but even more on the overall user experience. It is now a more holistic view
+of the integration, and we hope it will help everyone make better decisions
+about what to use in their homes.
 
-![The integration quality scale is also shown in the Home Assistant UI now](/images/blog/2024-12/quality-scale.jpeg)
+<img class="no-shadow" alt="The integration quality scale is also shown in the Home Assistant UI now. The image shows the HomeWizard Energy integration scoring platinum on the new integration quality scale." src="/images/blog/2024-12/integration-quality-scale.png" />
 
 We now have a total of 4 scaled tiers:
 
-- **🥉 Bronze**: The new minimum set of requirements we set for integrations.
-- **🥈 Silver**: Ensuring reliability and robustness of integrations.
-- **🥇 Gold**: Ensuring a gold standard user-experience including documentation.
-- **🏆 Platinum**: The epitome of quality, surpreme code quality, and an optimal performance and efficiency.
+- **🥉 [Bronze](/docs/quality_scale/#-bronze)**:
+  The new minimum set of requirements we've set for new integrations.
+- **🥈 [Silver](/docs/quality_scale/#-silver)**:
+  Ensuring reliability and robustness of integrations.
+- **🥇 [Gold](/docs/quality_scale/#-gold)**:
+  Ensuring a gold standard user experience, including documentation.
+- **🏆 [Platinum](/docs/quality_scale/#-platinum)**:
+  The epitome of quality, supreme code quality, and optimal performance.
 
-We also have four additional (non-scaled) special tiers: **❓ No score**,
-**🏠 Internal**, **💾 Legacy**, and **📦 Custom**.
+We also have four additional (non-scaled) special tiers: 
+
+- **❓&nbsp;[No&nbsp;score](/docs/quality_scale/#-no-score)**:
+  For integrations that are not yet scored against the new scale.
+- **🏠&nbsp;[Internal](/docs/quality_scale/#-internal)**
+  For integrations Home Assistant itself uses, like the automation engine.
+- **💾&nbsp;[Legacy](/docs/quality_scale/#-legacy)**
+  For older integrations that can't be set up through the UI.
+- **📦&nbsp;[Custom](/docs/quality_scale/#-custom)**
+  For custom integrations, as we can't score those.
 
 You can read all about these tiers, what they have been designed for, and a
-summary of their characteristics in our dedicated
-[Integration Quality Scale page](/docs/quality_scale/).
+summary of their characteristics on our dedicated
+[Integration Quality Scale page].
 
-With the new scale in place, we will be reevaluating all existing integrations
-and updating their quality scale accordingly. This will be an ongoing process
-and will take some time to complete.
+We sincerely hope this new scale, will not just help our users, but also our
+community developers to understand what is expected by providing a clear path
+oto improving their integrations. To help with that, we have now
+[extensively documented every rule and requirement for each tier in our
+developer documentation].
 
-We hope this new scale will also help our community developers to understand
-what is expected from them, and provide a clear path on how to improve their
-integrations. We therefore have now [extensively documented every single rule
-and requirement for each tier in our developer documentation](https://developers.home-assistant.io/docs/core/integration-quality-scale/#integration-quality-scale-rules).
+[each integration documentation page]: /integration/homewizard
+[Integration Quality Scale page]: /docs/quality_scale/
+[extensively documented every rule and requirement for each tier in our developer documentation]: https://developers.home-assistant.io/docs/core/integration-quality-scale/#integration-quality-scale-rules 
 
 ## Integrations
 
